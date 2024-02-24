@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="./css/pricePannel.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<title>Active eCommerce</title>
 </head>
 
@@ -30,7 +32,8 @@
 			</div>
 		</div>
 		<ul class="side-menu">
-			<li><a href="/" class="active"><i class='bx bxs-dashboard icon'></i> <span>Dashboard</span></a>
+			<li onclick="showDashboards()"><a href="/" class="active"><i class='bx bxs-dashboard icon'></i>
+					<span>Dashboard</span></a>
 			</li>
 			<li>
 
@@ -257,14 +260,14 @@
 					</li>
 				</ul>
 			</li>
-			<li class="aiz-side-nav-item mm-active">
+			<li onclick="showPricePannel()" class="aiz-side-nav-item mm-active">
 				<a href="#" class="aiz-side-nav-link active" aria-expanded="true">
 					<svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
 						<path id="_0339d7f72e6ebf7daea77d00de6c6177" data-name="0339d7f72e6ebf7daea77d00de6c6177"
 							d="M12.2,17H9a.533.533,0,0,1-.533-.533v-1.6a1.067,1.067,0,1,0-2.133,0v1.6A.533.533,0,0,1,5.8,17H2.6A1.6,1.6,0,0,1,1,15.4V12.2a.533.533,0,0,1,.533-.533h1.6a1.067,1.067,0,1,0,0-2.133h-1.6A.533.533,0,0,1,1,9V5.8A1.6,1.6,0,0,1,2.6,4.2H5.267V3.133a2.133,2.133,0,1,1,4.267,0V4.2H12.2a1.6,1.6,0,0,1,1.6,1.6V8.467h1.067a2.133,2.133,0,1,1,0,4.267H13.8V15.4A1.6,1.6,0,0,1,12.2,17ZM9.533,15.933H12.2a.533.533,0,0,0,.533-.533V12.2a.533.533,0,0,1,.533-.533h1.6a1.067,1.067,0,1,0,0-2.133h-1.6A.533.533,0,0,1,12.733,9V5.8a.533.533,0,0,0-.533-.533H9a.533.533,0,0,1-.533-.533v-1.6a1.067,1.067,0,1,0-2.133,0v1.6a.533.533,0,0,1-.533.533H2.6a.533.533,0,0,0-.533.533V8.467H3.133a2.133,2.133,0,0,1,0,4.267H2.067V15.4a.533.533,0,0,0,.533.533H5.267V14.867a2.133,2.133,0,0,1,4.267,0Z"
 							transform="translate(-1 -1)" fill="#575b6a"></path>
 					</svg>
-					<span class="aiz-side-nav-text">Addon Manager</span>
+					<span class="aiz-side-nav-text">Price Pannel</span>
 				</a>
 			</li>
 
@@ -367,639 +370,748 @@
 
 		<!-- MAIN -->
 		<main>
-			<div class="info-data">
-				<div class="left-info">
-					<div class="card">
-						<div class="card-info">
-							<div>
-								<h1>5</h1>
-								<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Customer</span>
+			<div id="dashboards">
+				<div class="info-data">
+					<div class="left-info">
+						<div class="card">
+							<div class="card-info">
+								<div>
+									<h1>5</h1>
+									<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Customer</span>
+								</div>
+								<div class="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+										<path id="Path_41567" data-name="Path 41567"
+											d="M21,13.75a1.25,1.25,0,0,0,2.5,0,7.508,7.508,0,0,0-4.068-6.667,4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,8.5,13.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0ZM14.125,4.375A1.875,1.875,0,1,1,16,6.25,1.877,1.877,0,0,1,14.125,4.375ZM10.932,24.083a4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,0,30.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0,1.25,1.25,0,0,0,2.5,0A7.508,7.508,0,0,0,10.932,24.083ZM5.625,21.375A1.875,1.875,0,1,1,7.5,23.25,1.877,1.877,0,0,1,5.625,21.375Zm22.307,2.708a4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,17,30.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0,1.25,1.25,0,0,0,2.5,0A7.508,7.508,0,0,0,27.932,24.083Zm-5.307-2.708A1.875,1.875,0,1,1,24.5,23.25,1.877,1.877,0,0,1,22.625,21.375Zm0,0"
+											fill="#d5d6db"></path>
+									</svg>
+								</div>
 							</div>
-							<div class="">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-									<path id="Path_41567" data-name="Path 41567"
-										d="M21,13.75a1.25,1.25,0,0,0,2.5,0,7.508,7.508,0,0,0-4.068-6.667,4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,8.5,13.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0ZM14.125,4.375A1.875,1.875,0,1,1,16,6.25,1.877,1.877,0,0,1,14.125,4.375ZM10.932,24.083a4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,0,30.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0,1.25,1.25,0,0,0,2.5,0A7.508,7.508,0,0,0,10.932,24.083ZM5.625,21.375A1.875,1.875,0,1,1,7.5,23.25,1.877,1.877,0,0,1,5.625,21.375Zm22.307,2.708a4.375,4.375,0,1,0-6.865,0A7.508,7.508,0,0,0,17,30.75a1.25,1.25,0,0,0,2.5,0,5,5,0,0,1,10,0,1.25,1.25,0,0,0,2.5,0A7.508,7.508,0,0,0,27.932,24.083Zm-5.307-2.708A1.875,1.875,0,1,1,24.5,23.25,1.877,1.877,0,0,1,22.625,21.375Zm0,0"
-										fill="#d5d6db"></path>
-								</svg>
+							<div style="margin-top: 42px;">
+								<h5 class="" style=" display:inline-flex;
+					 align-items: center; gap:8px;">
+									<span class=" badge-danger"></span>
+									Top Customers
+								</h5>
+								<div class="symbol-group" style="margin-top: 8px;">
+									<div class="symbol size-40px rounded-content overflow-hidden"
+										title="Paul K. Jensen">
+										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/5XVyeLGw5zRpb63bqgn2dtIOjCktLgBltNSQIPG3.webp"
+											alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
+											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+									</div>
+									<div class="symbol size-40px rounded-content overflow-hidden"
+										title="Arnulfo T. Lucky">
+										<img src="https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg"
+											alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
+											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div style="margin-top: 42px;">
-							<h5 class="" style=" display:inline-flex;
-							 align-items: center; gap:8px;">
-								<span class=" badge-danger"></span>
-								Top Customers
-							</h5>
+						<div class="card">
+							<div class="card-info">
+								<div>
+									<h1>178</h1>
+									<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Products</span>
+								</div>
+								<div class="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="27.429"
+										viewBox="0 0 32 27.429">
+										<g id="Layer_2" data-name="Layer 2" transform="translate(-2 -4)">
+											<path id="Path_40719" data-name="Path 40719"
+												d="M32.857,4H3.143A1.143,1.143,0,0,0,2,5.143V12a1.143,1.143,0,0,0,1.143,1.143H4.286V30.286a1.143,1.143,0,0,0,1.143,1.143H30.571a1.143,1.143,0,0,0,1.143-1.143V13.143h1.143A1.143,1.143,0,0,0,34,12V5.143A1.143,1.143,0,0,0,32.857,4ZM29.429,29.143H6.571v-16H29.429Zm2.286-18.286H4.286V6.286H31.714Z"
+												fill="#d5d6dc"></path>
+											<path id="Path_40720" data-name="Path 40720"
+												d="M13.143,16.286H20A1.143,1.143,0,0,0,20,14H13.143a1.143,1.143,0,0,0,0,2.286Z"
+												transform="translate(1.429 1.429)" fill="#d5d6dc"></path>
+										</g>
+									</svg>
+								</div>
+							</div>
+							<div style="margin-top: 42px;">
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-green"></span>
+										In-house Products
+									</h5>
+									<h5>60</h5>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-blue"></span>
+										Seller Products
+									</h5>
+									<h5>118</h5>
+								</div>
+
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-info">
+								<div>
+									<h1>178</h1>
+									<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Category</span>
+								</div>
+								<div class="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+										<path id="_137b5e1009c61a91dc419a2998502736"
+											data-name="137b5e1009c61a91dc419a2998502736"
+											d="M27.144,17.266A4.922,4.922,0,0,1,32,22.207h0v4.836A4.937,4.937,0,0,1,27.144,32H22.407a4.922,4.922,0,0,1-4.841-4.957h0V22.207a4.892,4.892,0,0,1,4.841-4.942h4.737Zm-20.343,0a1.3,1.3,0,0,1,1.247.619,1.358,1.358,0,0,1,0,1.415,1.3,1.3,0,0,1-1.247.619H4.856A2.281,2.281,0,0,0,2.6,22.208h0v4.775a2.326,2.326,0,0,0,2.257,2.289H9.622a2.219,2.219,0,0,0,1.6-.665,2.313,2.313,0,0,0,.662-1.624h0v-7.17l-.02-.178a1.342,1.342,0,0,1,.606-1.19,1.285,1.285,0,0,1,1.462.043,1.348,1.348,0,0,1,.506,1.4h0v7.14a4.907,4.907,0,0,1-4.856,4.957H4.856A5.012,5.012,0,0,1,0,27.028H0v-4.82a4.994,4.994,0,0,1,1.423-3.5,4.791,4.791,0,0,1,3.433-1.442H6.8Zm20.343,2.653H22.407a2.266,2.266,0,0,0-2.242,2.289h0v4.836a2.3,2.3,0,0,0,.652,1.623,2.2,2.2,0,0,0,1.59.666h4.737a2.2,2.2,0,0,0,1.59-.666,2.3,2.3,0,0,0,.652-1.623h0V22.207a2.313,2.313,0,0,0-.657-1.619,2.219,2.219,0,0,0-1.585-.67ZM27.144,0a5.013,5.013,0,0,1,4.841,4.957h0v4.82a5,5,0,0,1-1.376,3.512A4.794,4.794,0,0,1,27.2,14.78h-1.96a1.337,1.337,0,0,1,0-2.653h1.9a2.235,2.235,0,0,0,1.6-.691,2.33,2.33,0,0,0,.645-1.644h0V4.957a2.3,2.3,0,0,0-2.242-2.289H22.407a2.266,2.266,0,0,0-2.242,2.289h0v7.231l-.015.166a1.33,1.33,0,0,1-1.321,1.137,1.28,1.28,0,0,1-.91-.413,1.335,1.335,0,0,1-.352-.951h0V4.957a5,5,0,0,1,1.413-3.5A4.791,4.791,0,0,1,22.407,0h4.737ZM9.593,0a4.922,4.922,0,0,1,4.856,4.957h0V9.793a4.994,4.994,0,0,1-1.423,3.5,4.791,4.791,0,0,1-3.433,1.442H4.856A4.922,4.922,0,0,1,0,9.793H0V4.957A4.937,4.937,0,0,1,4.856,0H9.593Zm0,2.668H4.856a2.218,2.218,0,0,0-1.614.654,2.313,2.313,0,0,0-.672,1.635h0V9.793a2.314,2.314,0,0,0,.656,1.664,2.218,2.218,0,0,0,1.63.67H9.593a2.235,2.235,0,0,0,1.6-.691,2.33,2.33,0,0,0,.645-1.644h0V4.957A2.281,2.281,0,0,0,9.593,2.668Z"
+											fill="#d5d6dc"></path>
+									</svg>
+								</div>
+							</div>
+							<div style="margin-top: 42px;">
+								<div style="display: flex; justify-content: space-between;">
+									<h6 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" scale-red"></span>
+										Cellphones & Tabs
+									</h6>
+									<h6>$1,494.000</h6>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h6 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class="scale-yellow"></span>
+										SMen Clothing & Fashion
+									</h6>
+									<h6>$1,415.850</h6>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h6 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class="scale-blue"></span>
+										Computer & Accessories
+									</h6>
+									<h6>$666.650</h6>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-info">
+								<div>
+									<h1>101</h1>
+									<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Brands</span>
+								</div>
+								<div class="">
+									<svg id="Layer_51" data-name="Layer 51" xmlns="http://www.w3.org/2000/svg"
+										width="31.994" height="32" viewBox="0 0 31.994 32">
+										<path id="Path_41568" data-name="Path 41568"
+											d="M22.534,33.9a3.963,3.963,0,0,1-2.813-1.139L3.175,16.112A4.02,4.02,0,0,1,2.037,12.49L3.175,6.854A3.952,3.952,0,0,1,6.056,3.768l6.377-1.754a4.1,4.1,0,0,1,3.906,1.139L32.783,19.6a4.031,4.031,0,0,1,0,5.694l-7.368,7.47A3.986,3.986,0,0,1,22.534,33.9Zm8.677-12.686L14.722,4.724a1.788,1.788,0,0,0-1.3-.524,1.492,1.492,0,0,0-.444.057L6.592,5.965A1.72,1.72,0,0,0,5.339,7.286L4.257,12.912a1.788,1.788,0,0,0,.49,1.628L21.327,31.1a1.765,1.765,0,0,0,1.207.524,1.663,1.663,0,0,0,1.207-.5l7.5-7.47A1.742,1.742,0,0,0,31.212,21.213Z"
+											transform="translate(-1.966 -1.901)" fill="#d5d6dc"></path>
+										<path id="Path_41569" data-name="Path 41569"
+											d="M20.246,26A1.139,1.139,0,0,1,18.629,24.4L24.824,18.2a1.139,1.139,0,1,1,1.606,1.617Zm-7.983-9.953a4.316,4.316,0,1,1,4.293-4.339A4.339,4.339,0,0,1,12.263,16.052Zm1.355-6.229a2,2,0,0,0-1.435-.6,1.947,1.947,0,0,0-1.446.569,1.981,1.981,0,0,0-.581,1.412,2.129,2.129,0,0,0,.649,1.435,2.016,2.016,0,0,0,2.847,0,1.925,1.925,0,0,0,.569-1.412,2.027,2.027,0,0,0-.6-1.4Z"
+											transform="translate(-1.557 -1.135)" fill="#d5d6dc"></path>
+									</svg>
+								</div>
+							</div>
+							<div style="margin-top: 42px;">
+								<span style=" color: rgb(97, 95, 95); font-weight: 900;">Top Brands</span>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-green"></span>
+										Samsung
+									</h5>
+									<h5>$1,494.000</h5>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-blue"></span>
+										Nike
+									</h5>
+									<h5>$560.000</h5>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-violet"></span>
+										Polo
+									</h5>
+									<h5>$450.000</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-info">
+						<div class="right-card-one">
+							<div>
+								<h1 style="font-size: 30px; font-weight: 900;">
+									3.8K
+								</h1>
+								<h4 class="fs-13 fw-600 text-primary mb-0">Total Sales</h4>
+							</div>
+							<p><span>Sales this month</span><span> $2,703.000</span></p>
+							<h4>Sales Stat</h4>
+							<div style="margin-top: 170px; color: black;">
+								<hr />
+								<div
+									style="margin: 12px 0; display:flex; justify-content: center; align-items: center; gap:3px;">
+									<div class="blue-round">
+										<div class="gray-round"></div>
+									</div>
+									<span>Yearly Sales</span>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-violet"></span>
+										In-house Sales
+									</h5>
+									<h5>$450.000</h5>
+								</div>
+								<div style="display: flex; justify-content: space-between;">
+									<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+										<span class=" badge-green"></span>
+										Seller Sales
+									</h5>
+									<h5>$1,494.000</h5>
+								</div>
+							</div>
+						</div>
+						<div class="right-card-two">
+							<div>
+								<h1 style="font-size: 30px; font-weight: 900;">
+									10
+								</h1>
+								<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 900;">Total Sales</h4>
+							</div>
+							<div style="display: flex; justify-content: space-between; margin: 35px 0;">
+								<h5 class="" style=" display:inline-flex;
+				align-items: center; gap:8px;">
+									<span class=" badge-green"></span>
+									Approved Sellers
+								</h5>
+								<h5>10</h5>
+							</div>
+							<div>
+								<h5 class="" style=" display:inline-flex;
+					align-items: center; gap:8px;">
+									<span class=" badge-yellow"></span>
+									Top Sellers
+								</h5>
+							</div>
 							<div class="symbol-group" style="margin-top: 8px;">
 								<div class="symbol size-40px rounded-content overflow-hidden" title="Paul K. Jensen">
 									<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/5XVyeLGw5zRpb63bqgn2dtIOjCktLgBltNSQIPG3.webp"
 										alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
 										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
 								</div>
-								<div class="symbol size-40px rounded-content overflow-hidden" title="Arnulfo T. Lucky">
+								<div class="symbol" style="position: relative; right: 12px;" title="Filon Asset Store">
+									<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/2bn2SwHTbJHw4k7GmCFn8lKYaxxxBFuCqiO7jfmI.webp"
+										alt="Seller" class="h-100 img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<div class="symbol" style="position: relative; right: 17px;" title="Arnulfo T. Lucky">
+									<img src="https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg"
+										alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<div class="symbol " style="position: relative; right: 26px;" title="Arnulfo T. Lucky">
 									<img src="https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg"
 										alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
 										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-info">
-							<div>
-								<h1>178</h1>
-								<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Products</span>
-							</div>
-							<div class="">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="27.429"
-									viewBox="0 0 32 27.429">
-									<g id="Layer_2" data-name="Layer 2" transform="translate(-2 -4)">
-										<path id="Path_40719" data-name="Path 40719"
-											d="M32.857,4H3.143A1.143,1.143,0,0,0,2,5.143V12a1.143,1.143,0,0,0,1.143,1.143H4.286V30.286a1.143,1.143,0,0,0,1.143,1.143H30.571a1.143,1.143,0,0,0,1.143-1.143V13.143h1.143A1.143,1.143,0,0,0,34,12V5.143A1.143,1.143,0,0,0,32.857,4ZM29.429,29.143H6.571v-16H29.429Zm2.286-18.286H4.286V6.286H31.714Z"
-											fill="#d5d6dc"></path>
-										<path id="Path_40720" data-name="Path 40720"
-											d="M13.143,16.286H20A1.143,1.143,0,0,0,20,14H13.143a1.143,1.143,0,0,0,0,2.286Z"
-											transform="translate(1.429 1.429)" fill="#d5d6dc"></path>
-									</g>
-								</svg>
-							</div>
-						</div>
-						<div style="margin-top: 42px;">
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-green"></span>
-									In-house Products
-								</h5>
-								<h5>60</h5>
-							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-blue"></span>
-									Seller Products
-								</h5>
-								<h5>118</h5>
-							</div>
-
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-info">
-							<div>
-								<h1>178</h1>
-								<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Category</span>
-							</div>
-							<div class="">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-									<path id="_137b5e1009c61a91dc419a2998502736"
-										data-name="137b5e1009c61a91dc419a2998502736"
-										d="M27.144,17.266A4.922,4.922,0,0,1,32,22.207h0v4.836A4.937,4.937,0,0,1,27.144,32H22.407a4.922,4.922,0,0,1-4.841-4.957h0V22.207a4.892,4.892,0,0,1,4.841-4.942h4.737Zm-20.343,0a1.3,1.3,0,0,1,1.247.619,1.358,1.358,0,0,1,0,1.415,1.3,1.3,0,0,1-1.247.619H4.856A2.281,2.281,0,0,0,2.6,22.208h0v4.775a2.326,2.326,0,0,0,2.257,2.289H9.622a2.219,2.219,0,0,0,1.6-.665,2.313,2.313,0,0,0,.662-1.624h0v-7.17l-.02-.178a1.342,1.342,0,0,1,.606-1.19,1.285,1.285,0,0,1,1.462.043,1.348,1.348,0,0,1,.506,1.4h0v7.14a4.907,4.907,0,0,1-4.856,4.957H4.856A5.012,5.012,0,0,1,0,27.028H0v-4.82a4.994,4.994,0,0,1,1.423-3.5,4.791,4.791,0,0,1,3.433-1.442H6.8Zm20.343,2.653H22.407a2.266,2.266,0,0,0-2.242,2.289h0v4.836a2.3,2.3,0,0,0,.652,1.623,2.2,2.2,0,0,0,1.59.666h4.737a2.2,2.2,0,0,0,1.59-.666,2.3,2.3,0,0,0,.652-1.623h0V22.207a2.313,2.313,0,0,0-.657-1.619,2.219,2.219,0,0,0-1.585-.67ZM27.144,0a5.013,5.013,0,0,1,4.841,4.957h0v4.82a5,5,0,0,1-1.376,3.512A4.794,4.794,0,0,1,27.2,14.78h-1.96a1.337,1.337,0,0,1,0-2.653h1.9a2.235,2.235,0,0,0,1.6-.691,2.33,2.33,0,0,0,.645-1.644h0V4.957a2.3,2.3,0,0,0-2.242-2.289H22.407a2.266,2.266,0,0,0-2.242,2.289h0v7.231l-.015.166a1.33,1.33,0,0,1-1.321,1.137,1.28,1.28,0,0,1-.91-.413,1.335,1.335,0,0,1-.352-.951h0V4.957a5,5,0,0,1,1.413-3.5A4.791,4.791,0,0,1,22.407,0h4.737ZM9.593,0a4.922,4.922,0,0,1,4.856,4.957h0V9.793a4.994,4.994,0,0,1-1.423,3.5,4.791,4.791,0,0,1-3.433,1.442H4.856A4.922,4.922,0,0,1,0,9.793H0V4.957A4.937,4.937,0,0,1,4.856,0H9.593Zm0,2.668H4.856a2.218,2.218,0,0,0-1.614.654,2.313,2.313,0,0,0-.672,1.635h0V9.793a2.314,2.314,0,0,0,.656,1.664,2.218,2.218,0,0,0,1.63.67H9.593a2.235,2.235,0,0,0,1.6-.691,2.33,2.33,0,0,0,.645-1.644h0V4.957A2.281,2.281,0,0,0,9.593,2.668Z"
-										fill="#d5d6dc"></path>
-								</svg>
-							</div>
-						</div>
-						<div style="margin-top: 42px;">
-							<div style="display: flex; justify-content: space-between;">
-								<h6 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" scale-red"></span>
-									Cellphones & Tabs
-								</h6>
-								<h6>$1,494.000</h6>
-							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h6 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class="scale-yellow"></span>
-									SMen Clothing & Fashion
-								</h6>
-								<h6>$1,415.850</h6>
-							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h6 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class="scale-blue"></span>
-									Computer & Accessories
-								</h6>
-								<h6>$666.650</h6>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-info">
-							<div>
-								<h1>101</h1>
-								<span style=" color: rgb(97, 95, 95); font-weight: 900;">Total Brands</span>
-							</div>
-							<div class="">
-								<svg id="Layer_51" data-name="Layer 51" xmlns="http://www.w3.org/2000/svg"
-									width="31.994" height="32" viewBox="0 0 31.994 32">
-									<path id="Path_41568" data-name="Path 41568"
-										d="M22.534,33.9a3.963,3.963,0,0,1-2.813-1.139L3.175,16.112A4.02,4.02,0,0,1,2.037,12.49L3.175,6.854A3.952,3.952,0,0,1,6.056,3.768l6.377-1.754a4.1,4.1,0,0,1,3.906,1.139L32.783,19.6a4.031,4.031,0,0,1,0,5.694l-7.368,7.47A3.986,3.986,0,0,1,22.534,33.9Zm8.677-12.686L14.722,4.724a1.788,1.788,0,0,0-1.3-.524,1.492,1.492,0,0,0-.444.057L6.592,5.965A1.72,1.72,0,0,0,5.339,7.286L4.257,12.912a1.788,1.788,0,0,0,.49,1.628L21.327,31.1a1.765,1.765,0,0,0,1.207.524,1.663,1.663,0,0,0,1.207-.5l7.5-7.47A1.742,1.742,0,0,0,31.212,21.213Z"
-										transform="translate(-1.966 -1.901)" fill="#d5d6dc"></path>
-									<path id="Path_41569" data-name="Path 41569"
-										d="M20.246,26A1.139,1.139,0,0,1,18.629,24.4L24.824,18.2a1.139,1.139,0,1,1,1.606,1.617Zm-7.983-9.953a4.316,4.316,0,1,1,4.293-4.339A4.339,4.339,0,0,1,12.263,16.052Zm1.355-6.229a2,2,0,0,0-1.435-.6,1.947,1.947,0,0,0-1.446.569,1.981,1.981,0,0,0-.581,1.412,2.129,2.129,0,0,0,.649,1.435,2.016,2.016,0,0,0,2.847,0,1.925,1.925,0,0,0,.569-1.412,2.027,2.027,0,0,0-.6-1.4Z"
-										transform="translate(-1.557 -1.135)" fill="#d5d6dc"></path>
-								</svg>
-							</div>
-						</div>
-						<div style="margin-top: 42px;">
-							<span style=" color: rgb(97, 95, 95); font-weight: 900;">Top Brands</span>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-green"></span>
-									Samsung
-								</h5>
-								<h5>$1,494.000</h5>
-							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-blue"></span>
-									Nike
-								</h5>
-								<h5>$560.000</h5>
-							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-violet"></span>
-									Polo
-								</h5>
-								<h5>$450.000</h5>
+							<div style="margin-top: 80px;">
+								<p class="all-sellers">All Sellers</p>
+								<p class="pending-sellers">Pending Sellers</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="right-info">
-					<div class="right-card-one">
-						<div>
-							<h1 style="font-size: 30px; font-weight: 900;">
-								3.8K
-							</h1>
-							<h4 class="fs-13 fw-600 text-primary mb-0">Total Sales</h4>
-						</div>
-						<p><span>Sales this month</span><span> $2,703.000</span></p>
-						<h4>Sales Stat</h4>
-						<div style="margin-top: 170px; color: black;">
-							<hr />
-							<div
-								style="margin: 12px 0; display:flex; justify-content: center; align-items: center; gap:3px;">
-								<div class="blue-round">
-									<div class="gray-round"></div>
+				<!-- middle section -->
+				<div class="mid-data" style="margin-top: 20px;">
+					<div class="left-mid-data">
+						<div class="left-order-data">
+							<div class="order-card">
+								<div>
+									<h1 style="font-size: 30px; font-weight: 900;">
+										77
+									</h1>
+									<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 900;">Total Sales</h4>
 								</div>
-								<span>Yearly Sales</span>
+								<p>Total Order</p>
 							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-violet"></span>
-									In-house Sales
-								</h5>
-								<h5>$450.000</h5>
+							<div class="pending-order">
+								<p style="display: inline-flex; align-items: center; gap:10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-3"
+										viewBox="0 0 20 20">
+										<g id="_5" data-name="5" transform="translate(-2 -2)">
+											<path id="Path_41562" data-name="Path 41562"
+												d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+												fill="#fff"></path>
+											<path id="Path_41563" data-name="Path 41563"
+												d="M12,6a1,1,0,0,0-1,1v4.59l-2.71,2.7A1,1,0,1,0,9.7,15.7l3-3A1,1,0,0,0,13,12V7A1,1,0,0,0,12,6Z"
+												fill="#fff"></path>
+										</g>
+									</svg>
+									<span>Pending order</span>
+								</p>
+								<h2>47</h2>
 							</div>
-							<div style="display: flex; justify-content: space-between;">
-								<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-									<span class=" badge-green"></span>
-									Seller Sales
-								</h5>
-								<h5>$1,494.000</h5>
+						</div>
+						<div class="right-order-data">
+							<div class="order-place">
+								<p style="display: inline-flex; align-items: center; gap:10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="23.999" height="23.999" class="mr-3"
+										viewBox="0 0 23.999 23.999">
+										<g id="Group_29223" data-name="Group 29223" transform="translate(-2.25 -2.25)">
+											<path id="Path_18961" data-name="Path 18961"
+												d="M22.071,26.249H6.436A4.186,4.186,0,0,1,2.25,22.063V6.428A4.186,4.186,0,0,1,6.436,2.25H22.071a4.178,4.178,0,0,1,4.178,4.178V22.063a4.186,4.186,0,0,1-4.178,4.186ZM6.436,4.217A2.211,2.211,0,0,0,4.217,6.428V22.063a2.219,2.219,0,0,0,2.219,2.219H22.071a2.211,2.211,0,0,0,2.211-2.219V6.428a2.211,2.211,0,0,0-2.211-2.211Z"
+												fill="#0c7e9b"></path>
+											<path id="Path_18962" data-name="Path 18962"
+												d="M12.5,15.233a1.9,1.9,0,0,1-.787-.173,1.959,1.959,0,0,1-1.149-1.8V3.234a.984.984,0,1,1,1.967,0V13.258l1.849-1.637a1.9,1.9,0,0,1,2.526,0l1.9,1.645L18.743,3.234a.984.984,0,0,1,1.967,0V13.258a1.959,1.959,0,0,1-1.149,1.8,1.9,1.9,0,0,1-2.054-.307l-1.873-1.621-1.873,1.629a1.9,1.9,0,0,1-1.259.472ZM15.6,13.109ZM15.674,13.109Zm1.141,8.278H9.734a.984.984,0,1,1,0-1.967h7.082a.984.984,0,1,1,0,1.967Z"
+												transform="translate(-1.385)" fill="#0c7e9b"></path>
+										</g>
+									</svg>
+									<span>Order Placed</span>
+								</p>
+								<h2>77</h2>
+							</div>
+							<div class="confirmed-order">
+								<p style="display: inline-flex; align-items: center; gap:10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="23.999" height="25.134" class="mr-3"
+										viewBox="0 0 23.999 25.134">
+										<g id="Group_29224" data-name="Group 29224"
+											transform="translate(-41.293 -19.076)">
+											<path id="Path_18953" data-name="Path 18953"
+												d="M63.758,20.966V39.321c0,.054,0,.11-.008.163.01-.069.018-.135.028-.2a1.214,1.214,0,0,1-.082.3l.076-.184a1.7,1.7,0,0,1-.1.176c-.061.1.112-.122.051-.061-.023.023-.043.051-.066.074s-.041.038-.061.056c-.092.089.161-.1.048-.038-.059.033-.115.069-.176.1l.184-.076a1.184,1.184,0,0,1-.3.082l.2-.028a5.439,5.439,0,0,1-.576.008H58.56l.66,1.15a6.862,6.862,0,1,0-12.035-6.582,7.037,7.037,0,0,0-.732,2.656,6.91,6.91,0,0,0,.579,3.25,6.391,6.391,0,0,0,.339.673l.66-1.15H43.715c-.227,0-.464.015-.691-.008l.2.028a1.214,1.214,0,0,1-.3-.082l.184.076a1.7,1.7,0,0,1-.176-.1c-.1-.061.122.112.061.051-.023-.023-.051-.043-.074-.066s-.038-.041-.056-.061c-.089-.092.1.161.038.048-.033-.059-.069-.115-.1-.176l.076.184a1.214,1.214,0,0,1-.082-.3c.01.069.018.135.028.2a5.309,5.309,0,0,1-.008-.6V20.989c0-.054,0-.11.008-.163-.01.069-.018.135-.028.2a1.215,1.215,0,0,1,.082-.3l-.076.184a1.7,1.7,0,0,1,.1-.176c.061-.1-.112.122-.051.061.023-.023.043-.051.066-.074s.041-.038.061-.056c.092-.089-.161.1-.048.038.059-.033.115-.069.176-.1l-.184.076a1.184,1.184,0,0,1,.3-.082l-.2.028a6.185,6.185,0,0,1,.653-.008H63.4c.056,0,.11,0,.166.008l-.2-.028a1.215,1.215,0,0,1,.3.082l-.184-.076a1.7,1.7,0,0,1,.176.1c.1.061-.122-.112-.061-.051.023.023.051.043.074.066s.038.041.056.061c.089.092-.1-.161-.038-.048.033.059.069.115.1.176l-.076-.184a1.184,1.184,0,0,1,.082.3c-.01-.069-.018-.135-.028-.2,0,.051.005.1.008.143a.765.765,0,0,0,1.53,0A1.893,1.893,0,0,0,63.419,19.1H43.264a2.074,2.074,0,0,0-1.01.237A1.9,1.9,0,0,0,41.3,21V38.712a3.559,3.559,0,0,0,.1,1.242,1.915,1.915,0,0,0,1.216,1.175,2.017,2.017,0,0,0,.63.082h4.78a.772.772,0,0,0,.66-1.15,6.534,6.534,0,0,1-.349-.693l.076.184a6.2,6.2,0,0,1-.428-1.565c.01.069.018.135.028.2a6.223,6.223,0,0,1,0-1.629c-.01.069-.018.135-.028.2a6.2,6.2,0,0,1,.423-1.553l-.076.184a6.186,6.186,0,0,1,.413-.808c.079-.127.161-.255.25-.377l.069-.094c.01-.013.02-.025.031-.041.043-.061-.071.1-.069.089.013-.056.11-.135.148-.181a5.992,5.992,0,0,1,.63-.642c.054-.048.11-.094.166-.14l.092-.074c.087-.071-.158.117-.036.028s.245-.176.37-.257a6.1,6.1,0,0,1,.92-.484l-.184.076a6.173,6.173,0,0,1,1.553-.423l-.2.028a6.2,6.2,0,0,1,1.626,0l-.2-.028a6.2,6.2,0,0,1,1.553.423l-.184-.076a6.186,6.186,0,0,1,.808.413c.127.079.255.161.377.25l.094.069c.013.01.025.02.041.031.061.043-.1-.071-.089-.069.056.013.135.11.181.148a5.991,5.991,0,0,1,.642.63c.048.054.094.11.14.166.025.031.048.061.074.092.071.087-.117-.158-.028-.036s.176.245.257.37a6.1,6.1,0,0,1,.484.92l-.076-.184a6.173,6.173,0,0,1,.423,1.553c-.01-.069-.018-.135-.028-.2a6.335,6.335,0,0,1,0,1.629c.01-.069.018-.135.028-.2a6.171,6.171,0,0,1-.428,1.565l.076-.184a6.534,6.534,0,0,1-.349.693.771.771,0,0,0,.66,1.15h2.33c.841,0,1.68.008,2.521,0a1.891,1.891,0,0,0,1.879-1.866V20.966a.767.767,0,0,0-1.535,0Z"
+												transform="translate(0 -0.023)" fill="#4fcc89"></path>
+											<path id="Path_18954" data-name="Path 18954"
+												d="M251.777,19.842v6.939l1.15-.66-2.506-1.313c-.107-.056-.217-.117-.326-.171a.844.844,0,0,0-.806.015c-.056.031-.115.059-.171.089-.482.252-.966.5-1.448.76l-1.18.619,1.15.66V19.842l-.765.765h5.665a.765.765,0,0,0,0-1.53h-5.665a.775.775,0,0,0-.765.765v6.939a.773.773,0,0,0,1.15.66l2.475-1.3c.12-.061.237-.125.357-.186h-.772l2.475,1.3c.12.061.237.125.357.186a.773.773,0,0,0,1.15-.66V19.842a.762.762,0,1,0-1.524,0Zm3.263,17.506a6.233,6.233,0,0,1-.054.816c.01-.069.018-.135.028-.2a6.171,6.171,0,0,1-.428,1.565l.076-.184a6.214,6.214,0,0,1-.607,1.1c-.048.071-.1.138-.15.209.148-.209.043-.056.005-.01s-.061.076-.094.112c-.12.14-.245.275-.375.4s-.268.252-.41.367l-.115.092c.2-.163.056-.043.008-.008-.069.051-.14.1-.212.148a6.1,6.1,0,0,1-1.007.546l.184-.076a6.152,6.152,0,0,1-1.563.428l.2-.028a6.262,6.262,0,0,1-1.634,0l.2.028a6.152,6.152,0,0,1-1.563-.428l.184.076a6,6,0,0,1-1.007-.546c-.071-.048-.143-.1-.212-.148-.046-.036-.191-.156.008.008l-.115-.092c-.143-.117-.278-.24-.41-.367s-.255-.263-.375-.4c-.031-.038-.064-.074-.094-.112s-.143-.2.005.01c-.048-.069-.1-.138-.15-.209a6.213,6.213,0,0,1-.607-1.1l.076.184a6.2,6.2,0,0,1-.428-1.565c.01.069.018.135.028.2a6.223,6.223,0,0,1,0-1.629c-.01.069-.018.135-.028.2a6.2,6.2,0,0,1,.423-1.553l-.076.184a6.184,6.184,0,0,1,.413-.808c.079-.127.161-.255.25-.377l.069-.094c.01-.013.02-.025.031-.041.043-.061-.071.1-.069.089.013-.056.11-.135.148-.181a5.992,5.992,0,0,1,.63-.642c.054-.048.11-.094.166-.14l.092-.074c.087-.071-.158.117-.036.028s.245-.176.37-.257a6.1,6.1,0,0,1,.92-.484l-.184.076a6.173,6.173,0,0,1,1.553-.423l-.2.028a6.2,6.2,0,0,1,1.626,0l-.2-.028a6.2,6.2,0,0,1,1.553.423l-.184-.076a6.186,6.186,0,0,1,.808.413c.127.079.255.161.377.25l.094.069c.013.01.025.02.041.031.061.043-.1-.071-.089-.069.056.013.135.11.181.148a5.993,5.993,0,0,1,.642.63c.048.054.094.11.14.166.025.031.048.061.074.092.071.087-.117-.158-.028-.036s.176.245.257.37a6.1,6.1,0,0,1,.484.92l-.076-.184a6.173,6.173,0,0,1,.423,1.553c-.01-.069-.018-.135-.028-.2.023.27.041.54.041.813a.765.765,0,1,0,1.53,0,6.848,6.848,0,0,0-3.939-6.205,6.727,6.727,0,0,0-1.853-.566,7.4,7.4,0,0,0-2.187.008,6.849,6.849,0,0,0-5.264,9.269,7.23,7.23,0,0,0,1.219,2.009,6.833,6.833,0,0,0,5.713,2.322,6.985,6.985,0,0,0,3.995-1.7,6.788,6.788,0,0,0,2.19-3.832,7.471,7.471,0,0,0,.127-1.305.765.765,0,0,0-1.53,0Z"
+												transform="translate(-196.417)" fill="#4fcc89"></path>
+											<path id="Path_18955" data-name="Path 18955"
+												d="M359.965,640l1.706,1.706.242.242a.774.774,0,0,0,1.081,0l1.366-1.366,2.177-2.177.5-.5a.764.764,0,1,0-1.081-1.081l-1.366,1.366-2.177,2.177-.5.5h1.081l-1.706-1.706-.242-.242A.764.764,0,0,0,359.965,640Z"
+												transform="translate(-310.336 -601.79)" fill="#4fcc89"></path>
+										</g>
+									</svg>
+									<span>Pending order</span>
+								</p>
+								<h2>0</h2>
+							</div>
+							<div class="processed-order">
+								<p style="display: inline-flex; align-items: center; gap:10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26.182" class="mr-3"
+										viewBox="0 0 24 26.182">
+										<path id="Path_18963" data-name="Path 18963"
+											d="M16,0,4,5.455V20.727l12,5.455,12-5.455V5.455Zm0,2.4,8.045,3.657L16,9.712,7.952,6.055ZM6.182,19.323V7.645l8.727,3.965V23.288Zm19.636,0-8.727,3.966V11.61l8.727-3.966Z"
+											transform="translate(-4)" fill="#f1416c"></path>
+									</svg>
+									<span>Processed order</span>
+								</p>
+								<h2>1</h2>
+							</div>
+							<div class="order-shipped">
+								<p style="display: inline-flex; align-items: center; gap:10px;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20.727" class="mr-3"
+										viewBox="0 0 24 20.727">
+										<path id="shipping-truck"
+											d="M25,13.409v5.455a1.091,1.091,0,0,1-1.091,1.091H22.818a3.273,3.273,0,1,1-6.545,0H9.727a3.273,3.273,0,1,1-6.545,0H2.091A1.091,1.091,0,0,1,1,18.864V5.773A3.273,3.273,0,0,1,4.273,2.5h9.818a3.273,3.273,0,0,1,3.273,3.273V7.955h2.182a3.273,3.273,0,0,1,2.618,1.309l2.618,3.491a.665.665,0,0,1,.076.153l.065.12A1.091,1.091,0,0,1,25,13.409ZM7.545,19.955a1.091,1.091,0,1,0-1.091,1.091A1.091,1.091,0,0,0,7.545,19.955ZM15.182,5.773a1.091,1.091,0,0,0-1.091-1.091H4.273A1.091,1.091,0,0,0,3.182,5.773v12h.851a3.273,3.273,0,0,1,4.844,0h6.305Zm2.182,6.545h4.364l-1.309-1.745a1.091,1.091,0,0,0-.873-.436H17.364Zm3.273,7.636a1.091,1.091,0,1,0-1.091,1.091A1.091,1.091,0,0,0,20.636,19.955ZM22.818,14.5H17.364v3.033a3.273,3.273,0,0,1,4.6.24h.851Z"
+											transform="translate(-1 -2.5)" fill="#ffc700"></path>
+									</svg>
+									<span>Order Shipped</span>
+								</p>
+								<h2>2</h2>
 							</div>
 						</div>
 					</div>
-					<div class="right-card-two">
-						<div>
-							<h1 style="font-size: 30px; font-weight: 900;">
-								10
-							</h1>
-							<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 900;">Total Sales</h4>
-						</div>
-						<div style="display: flex; justify-content: space-between; margin: 35px 0;">
-							<h5 class="" style=" display:inline-flex;
-						align-items: center; gap:8px;">
-								<span class=" badge-green"></span>
-								Approved Sellers
-							</h5>
-							<h5>10</h5>
-						</div>
-						<div>
-							<h5 class="" style=" display:inline-flex;
-							align-items: center; gap:8px;">
-								<span class=" badge-yellow"></span>
-								Top Sellers
-							</h5>
-						</div>
-						<div class="symbol-group" style="margin-top: 8px;">
-							<div class="symbol size-40px rounded-content overflow-hidden" title="Paul K. Jensen">
-								<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/5XVyeLGw5zRpb63bqgn2dtIOjCktLgBltNSQIPG3.webp"
-									alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+					<div class="right-mid-data">
+						<div class="top-category">
+							<h4 style="color: #007bff;">In-house Top Category</h4>
+							<div style="margin-top:22px;">
+								<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
+								<div class="by-sales" style=" color: rgb(97, 95, 95);">
+									<span class="all">All</span>
+									<span class="other">Today</span>
+									<span class="other">Week</span>
+									<span class="other">Month</span>
+								</div>
 							</div>
-							<div class="symbol" style="position: relative; right: 12px;" title="Filon Asset Store">
-								<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/2bn2SwHTbJHw4k7GmCFn8lKYaxxxBFuCqiO7jfmI.webp"
-									alt="Seller" class="h-100 img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-							</div>
-							<div class="symbol" style="position: relative; right: 17px;" title="Arnulfo T. Lucky">
-								<img src="https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg"
-									alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-							</div>
-							<div class="symbol " style="position: relative; right: 26px;" title="Arnulfo T. Lucky">
-								<img src="https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg"
-									alt="Customer" class="h-100 img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+							<div style="margin-top:30px;">
+								<div class="category-list">
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/gi8k2mSdLBFKM3TO08IGkyRZXiqUCF6PofaL6lbl.webp"
+												alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">Cellphones & Tabs</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">$1,424.000</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/V7PbqhwELyJdDKTvtJq55KxmHhU1TCNN7XU2excd.webp"
+												alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Men Clothing & Fashion</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$530.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/PsRGATwFM8B8Wp4DuKoLprC7JEQ40S9hPVU4L1JE.webp"
+												alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Computer & Accessories
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$400.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/CRUXZaRxQd3m8WzuVNt0Byp7yWNnDCsJYfKoPALA.webp"
+												alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Jewelry & Watches
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$380.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Ym3yGeRLTv9BHctDMcFTCcuD78XKGweLZkALtjoz.webp"
+												alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Women Clothing & Fashion
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$135.000
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div style="margin-top: 80px;">
-							<p class="all-sellers">All Sellers</p>
-							<p class="pending-sellers">Pending Sellers</p>
+						<div class="top-brands">
+							<h4 style="color: #FC3B56;">In-house Top Brands</h4>
+							<div style="margin-top:22px;">
+								<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
+								<div class="by-sales" style=" color: rgb(97, 95, 95);">
+									<span class="all-btn">All</span>
+									<span class="others">Today</span>
+									<span class="others">Week</span>
+									<span class="others">Month</span>
+								</div>
+							</div>
+							<div style="margin-top:30px;">
+								<div class="category-list">
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/XVhcete1oEUIRr1tIPlRT6lsZHstyhgf1yoA9JM0.webp"
+												alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
+												rc='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">Samsung</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">$1,424.000</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Bj0kLPQRb2cd3nMjwFYxW5qUfixzPCN0nAyZBUqX.webp"
+												alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Polo</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$530.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/YfJayGiBPce6tVwcuauk3xzHHRXwGklTZCG6Lec4.webp"
+												alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Dell
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$400.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/8848Oq69wmiZPnPkB4Zc5kHoR2QLbv0H8CEY0E7B.webp"
+												alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Rolex
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$380.000
+										</span>
+									</div>
+									<div class="category">
+										<div>
+											<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/nEmAkQa0orTwkCYBsgrCLFzccQa0Ebi2xmytxlKn.webp"
+												alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
+												src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+											<p style="font-weight: 600;">
+												Calvin Klein
+											</p>
+										</div>
+										<span style="color: #FC3B56; font-weight: 700;">
+											$135.000
+										</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- middle section -->
-			<div class="mid-data" style="margin-top: 20px;">
-				<div class="left-mid-data">
-					<div class="left-order-data">
-						<div class="order-card">
-							<div>
+				<!-- last section -->
+				<div class="house-store-data">
+					<div class="left-store-data">
+						<div class="left-store">
+							<h3 style="color: rgb(97, 95, 95);">In-house Store</h3>
+							<div style="margin-top: 30px;">
 								<h1 style="font-size: 30px; font-weight: 900;">
-									77
+									$17,129.570
 								</h1>
-								<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 900;">Total Sales</h4>
+								<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 600;">Total Sales</h4>
 							</div>
-							<p>Total Order</p>
-						</div>
-						<div class="pending-order">
-							<p style="display: inline-flex; align-items: center; gap:10px;">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-3"
-									viewBox="0 0 20 20">
-									<g id="_5" data-name="5" transform="translate(-2 -2)">
-										<path id="Path_41562" data-name="Path 41562"
-											d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
-											fill="#fff"></path>
-										<path id="Path_41563" data-name="Path 41563"
-											d="M12,6a1,1,0,0,0-1,1v4.59l-2.71,2.7A1,1,0,1,0,9.7,15.7l3-3A1,1,0,0,0,13,12V7A1,1,0,0,0,12,6Z"
-											fill="#fff"></path>
-									</g>
-								</svg>
-								<span>Pending order</span>
-							</p>
-							<h2>47</h2>
-						</div>
-					</div>
-					<div class="right-order-data">
-						<div class="order-place">
-							<p style="display: inline-flex; align-items: center; gap:10px;">
-								<svg xmlns="http://www.w3.org/2000/svg" width="23.999" height="23.999" class="mr-3"
-									viewBox="0 0 23.999 23.999">
-									<g id="Group_29223" data-name="Group 29223" transform="translate(-2.25 -2.25)">
-										<path id="Path_18961" data-name="Path 18961"
-											d="M22.071,26.249H6.436A4.186,4.186,0,0,1,2.25,22.063V6.428A4.186,4.186,0,0,1,6.436,2.25H22.071a4.178,4.178,0,0,1,4.178,4.178V22.063a4.186,4.186,0,0,1-4.178,4.186ZM6.436,4.217A2.211,2.211,0,0,0,4.217,6.428V22.063a2.219,2.219,0,0,0,2.219,2.219H22.071a2.211,2.211,0,0,0,2.211-2.219V6.428a2.211,2.211,0,0,0-2.211-2.211Z"
-											fill="#0c7e9b"></path>
-										<path id="Path_18962" data-name="Path 18962"
-											d="M12.5,15.233a1.9,1.9,0,0,1-.787-.173,1.959,1.959,0,0,1-1.149-1.8V3.234a.984.984,0,1,1,1.967,0V13.258l1.849-1.637a1.9,1.9,0,0,1,2.526,0l1.9,1.645L18.743,3.234a.984.984,0,0,1,1.967,0V13.258a1.959,1.959,0,0,1-1.149,1.8,1.9,1.9,0,0,1-2.054-.307l-1.873-1.621-1.873,1.629a1.9,1.9,0,0,1-1.259.472ZM15.6,13.109ZM15.674,13.109Zm1.141,8.278H9.734a.984.984,0,1,1,0-1.967h7.082a.984.984,0,1,1,0,1.967Z"
-											transform="translate(-1.385)" fill="#0c7e9b"></path>
-									</g>
-								</svg>
-								<span>Order Placed</span>
-							</p>
-							<h2>77</h2>
-						</div>
-						<div class="confirmed-order">
-							<p style="display: inline-flex; align-items: center; gap:10px;">
-								<svg xmlns="http://www.w3.org/2000/svg" width="23.999" height="25.134" class="mr-3"
-									viewBox="0 0 23.999 25.134">
-									<g id="Group_29224" data-name="Group 29224" transform="translate(-41.293 -19.076)">
-										<path id="Path_18953" data-name="Path 18953"
-											d="M63.758,20.966V39.321c0,.054,0,.11-.008.163.01-.069.018-.135.028-.2a1.214,1.214,0,0,1-.082.3l.076-.184a1.7,1.7,0,0,1-.1.176c-.061.1.112-.122.051-.061-.023.023-.043.051-.066.074s-.041.038-.061.056c-.092.089.161-.1.048-.038-.059.033-.115.069-.176.1l.184-.076a1.184,1.184,0,0,1-.3.082l.2-.028a5.439,5.439,0,0,1-.576.008H58.56l.66,1.15a6.862,6.862,0,1,0-12.035-6.582,7.037,7.037,0,0,0-.732,2.656,6.91,6.91,0,0,0,.579,3.25,6.391,6.391,0,0,0,.339.673l.66-1.15H43.715c-.227,0-.464.015-.691-.008l.2.028a1.214,1.214,0,0,1-.3-.082l.184.076a1.7,1.7,0,0,1-.176-.1c-.1-.061.122.112.061.051-.023-.023-.051-.043-.074-.066s-.038-.041-.056-.061c-.089-.092.1.161.038.048-.033-.059-.069-.115-.1-.176l.076.184a1.214,1.214,0,0,1-.082-.3c.01.069.018.135.028.2a5.309,5.309,0,0,1-.008-.6V20.989c0-.054,0-.11.008-.163-.01.069-.018.135-.028.2a1.215,1.215,0,0,1,.082-.3l-.076.184a1.7,1.7,0,0,1,.1-.176c.061-.1-.112.122-.051.061.023-.023.043-.051.066-.074s.041-.038.061-.056c.092-.089-.161.1-.048.038.059-.033.115-.069.176-.1l-.184.076a1.184,1.184,0,0,1,.3-.082l-.2.028a6.185,6.185,0,0,1,.653-.008H63.4c.056,0,.11,0,.166.008l-.2-.028a1.215,1.215,0,0,1,.3.082l-.184-.076a1.7,1.7,0,0,1,.176.1c.1.061-.122-.112-.061-.051.023.023.051.043.074.066s.038.041.056.061c.089.092-.1-.161-.038-.048.033.059.069.115.1.176l-.076-.184a1.184,1.184,0,0,1,.082.3c-.01-.069-.018-.135-.028-.2,0,.051.005.1.008.143a.765.765,0,0,0,1.53,0A1.893,1.893,0,0,0,63.419,19.1H43.264a2.074,2.074,0,0,0-1.01.237A1.9,1.9,0,0,0,41.3,21V38.712a3.559,3.559,0,0,0,.1,1.242,1.915,1.915,0,0,0,1.216,1.175,2.017,2.017,0,0,0,.63.082h4.78a.772.772,0,0,0,.66-1.15,6.534,6.534,0,0,1-.349-.693l.076.184a6.2,6.2,0,0,1-.428-1.565c.01.069.018.135.028.2a6.223,6.223,0,0,1,0-1.629c-.01.069-.018.135-.028.2a6.2,6.2,0,0,1,.423-1.553l-.076.184a6.186,6.186,0,0,1,.413-.808c.079-.127.161-.255.25-.377l.069-.094c.01-.013.02-.025.031-.041.043-.061-.071.1-.069.089.013-.056.11-.135.148-.181a5.992,5.992,0,0,1,.63-.642c.054-.048.11-.094.166-.14l.092-.074c.087-.071-.158.117-.036.028s.245-.176.37-.257a6.1,6.1,0,0,1,.92-.484l-.184.076a6.173,6.173,0,0,1,1.553-.423l-.2.028a6.2,6.2,0,0,1,1.626,0l-.2-.028a6.2,6.2,0,0,1,1.553.423l-.184-.076a6.186,6.186,0,0,1,.808.413c.127.079.255.161.377.25l.094.069c.013.01.025.02.041.031.061.043-.1-.071-.089-.069.056.013.135.11.181.148a5.991,5.991,0,0,1,.642.63c.048.054.094.11.14.166.025.031.048.061.074.092.071.087-.117-.158-.028-.036s.176.245.257.37a6.1,6.1,0,0,1,.484.92l-.076-.184a6.173,6.173,0,0,1,.423,1.553c-.01-.069-.018-.135-.028-.2a6.335,6.335,0,0,1,0,1.629c.01-.069.018-.135.028-.2a6.171,6.171,0,0,1-.428,1.565l.076-.184a6.534,6.534,0,0,1-.349.693.771.771,0,0,0,.66,1.15h2.33c.841,0,1.68.008,2.521,0a1.891,1.891,0,0,0,1.879-1.866V20.966a.767.767,0,0,0-1.535,0Z"
-											transform="translate(0 -0.023)" fill="#4fcc89"></path>
-										<path id="Path_18954" data-name="Path 18954"
-											d="M251.777,19.842v6.939l1.15-.66-2.506-1.313c-.107-.056-.217-.117-.326-.171a.844.844,0,0,0-.806.015c-.056.031-.115.059-.171.089-.482.252-.966.5-1.448.76l-1.18.619,1.15.66V19.842l-.765.765h5.665a.765.765,0,0,0,0-1.53h-5.665a.775.775,0,0,0-.765.765v6.939a.773.773,0,0,0,1.15.66l2.475-1.3c.12-.061.237-.125.357-.186h-.772l2.475,1.3c.12.061.237.125.357.186a.773.773,0,0,0,1.15-.66V19.842a.762.762,0,1,0-1.524,0Zm3.263,17.506a6.233,6.233,0,0,1-.054.816c.01-.069.018-.135.028-.2a6.171,6.171,0,0,1-.428,1.565l.076-.184a6.214,6.214,0,0,1-.607,1.1c-.048.071-.1.138-.15.209.148-.209.043-.056.005-.01s-.061.076-.094.112c-.12.14-.245.275-.375.4s-.268.252-.41.367l-.115.092c.2-.163.056-.043.008-.008-.069.051-.14.1-.212.148a6.1,6.1,0,0,1-1.007.546l.184-.076a6.152,6.152,0,0,1-1.563.428l.2-.028a6.262,6.262,0,0,1-1.634,0l.2.028a6.152,6.152,0,0,1-1.563-.428l.184.076a6,6,0,0,1-1.007-.546c-.071-.048-.143-.1-.212-.148-.046-.036-.191-.156.008.008l-.115-.092c-.143-.117-.278-.24-.41-.367s-.255-.263-.375-.4c-.031-.038-.064-.074-.094-.112s-.143-.2.005.01c-.048-.069-.1-.138-.15-.209a6.213,6.213,0,0,1-.607-1.1l.076.184a6.2,6.2,0,0,1-.428-1.565c.01.069.018.135.028.2a6.223,6.223,0,0,1,0-1.629c-.01.069-.018.135-.028.2a6.2,6.2,0,0,1,.423-1.553l-.076.184a6.184,6.184,0,0,1,.413-.808c.079-.127.161-.255.25-.377l.069-.094c.01-.013.02-.025.031-.041.043-.061-.071.1-.069.089.013-.056.11-.135.148-.181a5.992,5.992,0,0,1,.63-.642c.054-.048.11-.094.166-.14l.092-.074c.087-.071-.158.117-.036.028s.245-.176.37-.257a6.1,6.1,0,0,1,.92-.484l-.184.076a6.173,6.173,0,0,1,1.553-.423l-.2.028a6.2,6.2,0,0,1,1.626,0l-.2-.028a6.2,6.2,0,0,1,1.553.423l-.184-.076a6.186,6.186,0,0,1,.808.413c.127.079.255.161.377.25l.094.069c.013.01.025.02.041.031.061.043-.1-.071-.089-.069.056.013.135.11.181.148a5.993,5.993,0,0,1,.642.63c.048.054.094.11.14.166.025.031.048.061.074.092.071.087-.117-.158-.028-.036s.176.245.257.37a6.1,6.1,0,0,1,.484.92l-.076-.184a6.173,6.173,0,0,1,.423,1.553c-.01-.069-.018-.135-.028-.2.023.27.041.54.041.813a.765.765,0,1,0,1.53,0,6.848,6.848,0,0,0-3.939-6.205,6.727,6.727,0,0,0-1.853-.566,7.4,7.4,0,0,0-2.187.008,6.849,6.849,0,0,0-5.264,9.269,7.23,7.23,0,0,0,1.219,2.009,6.833,6.833,0,0,0,5.713,2.322,6.985,6.985,0,0,0,3.995-1.7,6.788,6.788,0,0,0,2.19-3.832,7.471,7.471,0,0,0,.127-1.305.765.765,0,0,0-1.53,0Z"
-											transform="translate(-196.417)" fill="#4fcc89"></path>
-										<path id="Path_18955" data-name="Path 18955"
-											d="M359.965,640l1.706,1.706.242.242a.774.774,0,0,0,1.081,0l1.366-1.366,2.177-2.177.5-.5a.764.764,0,1,0-1.081-1.081l-1.366,1.366-2.177,2.177-.5.5h1.081l-1.706-1.706-.242-.242A.764.764,0,0,0,359.965,640Z"
-											transform="translate(-310.336 -601.79)" fill="#4fcc89"></path>
-									</g>
-								</svg>
-								<span>Pending order</span>
-							</p>
-							<h2>0</h2>
-						</div>
-						<div class="processed-order">
-							<p style="display: inline-flex; align-items: center; gap:10px;">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26.182" class="mr-3"
-									viewBox="0 0 24 26.182">
-									<path id="Path_18963" data-name="Path 18963"
-										d="M16,0,4,5.455V20.727l12,5.455,12-5.455V5.455Zm0,2.4,8.045,3.657L16,9.712,7.952,6.055ZM6.182,19.323V7.645l8.727,3.965V23.288Zm19.636,0-8.727,3.966V11.61l8.727-3.966Z"
-										transform="translate(-4)" fill="#f1416c"></path>
-								</svg>
-								<span>Processed order</span>
-							</p>
-							<h2>1</h2>
-						</div>
-						<div class="order-shipped">
-							<p style="display: inline-flex; align-items: center; gap:10px;">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="20.727" class="mr-3"
-									viewBox="0 0 24 20.727">
-									<path id="shipping-truck"
-										d="M25,13.409v5.455a1.091,1.091,0,0,1-1.091,1.091H22.818a3.273,3.273,0,1,1-6.545,0H9.727a3.273,3.273,0,1,1-6.545,0H2.091A1.091,1.091,0,0,1,1,18.864V5.773A3.273,3.273,0,0,1,4.273,2.5h9.818a3.273,3.273,0,0,1,3.273,3.273V7.955h2.182a3.273,3.273,0,0,1,2.618,1.309l2.618,3.491a.665.665,0,0,1,.076.153l.065.12A1.091,1.091,0,0,1,25,13.409ZM7.545,19.955a1.091,1.091,0,1,0-1.091,1.091A1.091,1.091,0,0,0,7.545,19.955ZM15.182,5.773a1.091,1.091,0,0,0-1.091-1.091H4.273A1.091,1.091,0,0,0,3.182,5.773v12h.851a3.273,3.273,0,0,1,4.844,0h6.305Zm2.182,6.545h4.364l-1.309-1.745a1.091,1.091,0,0,0-.873-.436H17.364Zm3.273,7.636a1.091,1.091,0,1,0-1.091,1.091A1.091,1.091,0,0,0,20.636,19.955ZM22.818,14.5H17.364v3.033a3.273,3.273,0,0,1,4.6.24h.851Z"
-										transform="translate(-1 -2.5)" fill="#ffc700"></path>
-								</svg>
-								<span>Order Shipped</span>
-							</p>
-							<h2>2</h2>
-						</div>
-					</div>
-				</div>
-				<div class="right-mid-data">
-					<div class="top-category">
-						<h4 style="color: #007bff;">In-house Top Category</h4>
-						<div style="margin-top:22px;">
-							<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
-							<div class="by-sales" style=" color: rgb(97, 95, 95);">
-								<span class="all">All</span>
-								<span class="other">Today</span>
-								<span class="other">Week</span>
-								<span class="other">Month</span>
+							<div class="chart-container">
+								<canvas id="myChart"></canvas>
 							</div>
+							<a href="#">
+								<p>All In-house Orders</p>
+							</a>
 						</div>
-						<div style="margin-top:30px;">
-							<div class="category-list">
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/gi8k2mSdLBFKM3TO08IGkyRZXiqUCF6PofaL6lbl.webp"
-											alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">Cellphones & Tabs</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">$1,424.000</span>
+						<div class="right-store">
+							<div class="card">
+								<div>
+									<h1>60</h1>
+									<p style="color: #007bff; margin-top: 2px; font-weight: 500;">Inhouse Product</p>
 								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/V7PbqhwELyJdDKTvtJq55KxmHhU1TCNN7XU2excd.webp"
-											alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Men Clothing & Fashion</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$530.000
-									</span>
+							</div>
+							<div class="card">
+								<div>
+									<h1>60</h1>
+									<p style="color: orange; margin-top: 2px; font-weight: 500;">Inhouse Product</p>
 								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/PsRGATwFM8B8Wp4DuKoLprC7JEQ40S9hPVU4L1JE.webp"
-											alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Computer & Accessories
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$400.000
-									</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/CRUXZaRxQd3m8WzuVNt0Byp7yWNnDCsJYfKoPALA.webp"
-											alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Jewelry & Watches
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$380.000
-									</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Ym3yGeRLTv9BHctDMcFTCcuD78XKGweLZkALtjoz.webp"
-											alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Women Clothing & Fashion
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$135.000
-									</span>
+							</div>
+							<div class="card">
+								<div>
+									<h1>60</h1>
+									<p style="color: rgb(190, 68, 190); margin-top: 2px; font-weight: 500;">Inhouse
+										Product
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="top-brands">
-						<h4 style="color: #FC3B56;">In-house Top Brands</h4>
-						<div style="margin-top:22px;">
-							<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
-							<div class="by-sales" style=" color: rgb(97, 95, 95);">
-								<span class="all-btn">All</span>
-								<span class="others">Today</span>
-								<span class="others">Week</span>
-								<span class="others">Month</span>
-							</div>
-						</div>
-						<div style="margin-top:30px;">
-							<div class="category-list">
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/XVhcete1oEUIRr1tIPlRT6lsZHstyhgf1yoA9JM0.webp"
-											alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
-											rc='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">Samsung</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">$1,424.000</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Bj0kLPQRb2cd3nMjwFYxW5qUfixzPCN0nAyZBUqX.webp"
-											alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Polo</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$530.000
-									</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/YfJayGiBPce6tVwcuauk3xzHHRXwGklTZCG6Lec4.webp"
-											alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Dell
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$400.000
-									</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/8848Oq69wmiZPnPkB4Zc5kHoR2QLbv0H8CEY0E7B.webp"
-											alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Rolex
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$380.000
-									</span>
-								</div>
-								<div class="category">
-									<div>
-										<img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/nEmAkQa0orTwkCYBsgrCLFzccQa0Ebi2xmytxlKn.webp"
-											alt="Brand" class="h-100 img-fit ls-is-cached lazyloaded"
-											src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-										<p style="font-weight: 600;">
-											Calvin Klein
-										</p>
-									</div>
-									<span style="color: #FC3B56; font-weight: 700;">
-										$135.000
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- last section -->
-			<div class="house-store-data">
-				<div class="left-store-data">
-					<div class="left-store">
-						<h3 style="color: rgb(97, 95, 95);">In-house Store</h3>
-						<div style="margin-top: 30px;">
-							<h1 style="font-size: 30px; font-weight: 900;">
-								$17,129.570
-							</h1>
-							<h4 class="" style=" color: rgb(97, 95, 95); font-weight: 600;">Total Sales</h4>
-						</div>
-						<div class="chart-container">
-							<canvas id="myChart"></canvas>
-						</div>
-						<a href="#">
-							<p>All In-house Orders</p>
-						</a>
-					</div>
-					<div class="right-store">
-						<div class="card">
+					<div class="right-store-data">
+						<div class="top-sellers">
 							<div>
-								<h1>60</h1>
-								<p style="color: #007bff; margin-top: 2px; font-weight: 500;">Inhouse Product</p>
+								<h4>Top Seller & Product</h4>
+								<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
+							</div>
+							<div class="top-sellers-days">
+								<div class="by-sales" style=" color: rgb(97, 95, 95);">
+									<span class="all-btn">All</span>
+									<span class="others">Today</span>
+									<span class="others">Week</span>
+									<span class="others">Month</span>
+								</div>
 							</div>
 						</div>
-						<div class="card">
+						<div class="slick-slide">
 							<div>
-								<h1>60</h1>
-								<p style="color: orange; margin-top: 2px; font-weight: 500;">Inhouse Product</p>
+								<div>
+									<img width="80px"
+										style="border: 1px solid #007bff; border-radius: 8px; padding: 10px;"
+										src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Qjj4dDEMSrAv6RlftG5Ue1BKLvgW7Ai5kPYL22xZ.webp"
+										alt="Sellers" class="img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<p>
+									Filon Asset Store
+								</p>
 							</div>
-						</div>
-						<div class="card">
-							<div>
-								<h1>60</h1>
-								<p style="color: rgb(190, 68, 190); margin-top: 2px; font-weight: 500;">Inhouse Product
+							<div class="silk-part">
+								<div>
+									<img width="80px"
+										src="https://demo.activeitzone.com/ecommerce/public/uploads/all/AcQrue0Rc4krp9i0LsDXW8FcZ6z4YYWXOdcJL908.webp"
+										alt="Sellers" class="img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<p>
+									Adidas
+								</p>
+							</div>
+							<div class="silk-part">
+								<div>
+									<img width="80px"
+										src="https://demo.activeitzone.com/ecommerce/public/uploads/all/qf8pEDFmjfjIDYYGXaKtJ90ilKQMC7F1rXk2vQJr.webp"
+										alt="Sellers" class="img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<p>
+									LOUIS VUITTON
+								</p>
+							</div>
+							<div class="silk-part">
+								<div>
+									<img width="80px"
+										src="https://demo.activeitzone.com/ecommerce/public/uploads/all/QMFN9PeXeCU9pWZN8viMl1ZYjYRwbXLJAsz3abgC.webp"
+										alt="Sellers" class="img-fit ls-is-cached lazyloaded"
+										src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+								</div>
+								<p>
+									Pink Horizon
 								</p>
 							</div>
 						</div>
+						<div class="product-details">
+							<table>
+								<thead>
+									<tr>
+										<th colspan="2">Item</th>
+										<th>Quantity</th>
+										<th>Total-price</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td width="50" colspan="2">
+											<p class="colspan">
+												<img width="50" height="50"
+													src="https://demo.activeitzone.com/ecommerce/public/uploads/all/fAD8pxgpCqfO0tigZPqtbFdyclmDyqPqPgxDeh4O.webp"
+													alt="Category" class="h-100 img-fit ls-is-cached lazyloaded"
+													src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg' />
+												<span>Accutime Kids Microsoft Minecraft Green Educationa ...</span>
+											</p>
+										</td>
+										<td>Home Delivery</td>
+										<td>1</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
-				<div class="right-store-data">
-					<div class="top-sellers">
-						<div>
-							<h4>Top Seller & Product</h4>
-							<span style=" color: rgb(97, 95, 95); font-weight: 900;">By Sales</span>
-						</div>
-						<div class="top-sellers-days">
-							<div class="by-sales" style=" color: rgb(97, 95, 95);">
-								<span class="all-btn">All</span>
-								<span class="others">Today</span>
-								<span class="others">Week</span>
-								<span class="others">Month</span>
-							</div>
-						</div>
+			</div>
+
+			<div id="pricePannel" style="display: none;">
+					<div class="menu-icon" id="sidebarToggle">
+						<span class="material-icons-outlined">menu</span>
 					</div>
-					<div class="slick-slide">
-						<div >
-							<div>
-								<img width="80px" style="border: 1px solid #007bff; border-radius: 8px; padding: 10px;"
-									src="https://demo.activeitzone.com/ecommerce/public/uploads/all/Qjj4dDEMSrAv6RlftG5Ue1BKLvgW7Ai5kPYL22xZ.webp"
-									alt="Sellers" class="img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+				<div class="price-pannel">
+					<aside id="sidebar-content">
+						<div class="sidebar-title">
+							<div class="sidebar-brand">
+								<a href="#" style="display: flex; gap:10px; align-items: center; margin-top: 20px; color: rgb(243, 230, 230);"> <i
+									class="material-icons-outlined icon">store</i>Store</a>
 							</div>
-							<p>
-								Filon Asset Store
-							</p>
 						</div>
-						<div class="silk-part">
-							<div>
-								<img width="80px"
-									src="https://demo.activeitzone.com/ecommerce/public/uploads/all/AcQrue0Rc4krp9i0LsDXW8FcZ6z4YYWXOdcJL908.webp"
-									alt="Sellers" class="img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+						<ul class="sidebar-list">
+							<li onclick="showBillBoard()"><a href="" class="active"><i class='bx bxs-dashboard icon'></i> Bill Board</a>
+							</li>
+							<li onclick="showEcommerce()"><a href="#" class="active"> <i
+										class="material-icons-outlined icon">shopping_cart</i>
+									E-commerce  <i class="material-icons-outlined icon-right">lock</i></a></li>
+						</ul>
+					</aside>		
+					<main class="price-content">
+						<div id="billboard">
+							<h2>Bill Board</h2>
+						</div>
+						<div id="ecommerce" style="display: none;">
+							<div class="toggle">
+								<span class="yearly" style="font-size: 18px; font-weight: 700;">Billed Yearly </span>
+								<div class="toggle-button-cover">
+									<div class="button-cover">
+										<div class="button r" id="button-1">
+											<input type="checkbox" class="checkbox" />
+											<div class="knobs"></div>
+											<div class="layer"></div>
+										</div>
+									</div>
+								</div>
+								<span class="monthly" style="font-size: 18px; font-weight: 700;">Billed Monthly</span>
 							</div>
-							<p>
-								Adidas
-							</p>
-						</div>
-						<div class="silk-part">
-							<div>
-								<img width="80px"
-									src="https://demo.activeitzone.com/ecommerce/public/uploads/all/qf8pEDFmjfjIDYYGXaKtJ90ilKQMC7F1rXk2vQJr.webp"
-									alt="Sellers" class="img-fit ls-is-cached lazyloaded"
-									src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
+							<!-- card data -->
+							<div class="data-info">
+								<div class="cards">
+									<h4>Startup</h4>
+									<h1>৳00</h1>
+									<span>per user, per month</span>
+									<a href="details.html?fromEcommerce=true">
+										<p class="start-btn">Start My 15-day Trial</p>
+									</a>
+									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
+									</hr>
+									<p class="para">
+										5 Social Profiles 5 Scheduled Posts Per Profile 400+ Templates Calendar View
+										24/7
+										Support.
+									</p>
+								</div>
+								<div class="cards">
+									<h4>Business</h4>
+									<h1>৳300</h1>
+									<span>per user, per month</span>
+									<a href="details.html?fromEcommerce=true">
+										<p class="start-btn">Start My 15-day Trial</p>
+									</a>
+									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
+									</hr>
+									<p class="para">
+										10 Social Profiles 25 Scheduled Posts Per Profile 400+ Templates Calendar View
+										24/7
+										VIP
+										Support.
+									</p>
+								</div>
+								<div class="cards">
+									<h4>Agency</h4>
+									<h1>৳500</h1>
+									<span>per user, per month</span>
+									<a href="details.html?fromEcommerce=true">
+										<p class="start-btn">Start My 15-day Trial</p>
+									</a>
+									<hr style="border-color: 1px solid; width: 80%; margin: 0 auto;">
+									</hr>
+									<p class="para">
+										100 Social Profiles 100 Scheduled Posts Per Profile 400+ Templates Calendar View
+										24/7
+										Support.
+									</p>
+								</div>
 							</div>
-							<p>
-								LOUIS VUITTON
-							</p>
 						</div>
-						<div class="silk-part">
-							<div>
-								<img width="80px" src="https://demo.activeitzone.com/ecommerce/public/uploads/all/QMFN9PeXeCU9pWZN8viMl1ZYjYRwbXLJAsz3abgC.webp" alt="Sellers" class="img-fit ls-is-cached lazyloaded" src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'>
-							</div>
-							<p>
-								Pink Horizon
-							</p>
-						</div>
-					</div>
-					<div class="product-details">
-						<table>
-							<thead>
-								<tr>
-									<th colspan="2">Item</th>
-									<th>Quantity</th>
-									<th>Total-price</th>
-								</tr>
-							</thead>
-					
-							<tbody>
-								<tr>
-									<td width="50" colspan="2" >			
-										<p class="colspan" >
-											<img width="50" height="50" src="https://demo.activeitzone.com/ecommerce/public/uploads/all/fAD8pxgpCqfO0tigZPqtbFdyclmDyqPqPgxDeh4O.webp" alt="Category" class="h-100 img-fit ls-is-cached lazyloaded" src='https://demo.activeitzone.com/ecommerce/public/assets/img/placeholder.jpg'/>
-                                        <span>Accutime Kids Microsoft Minecraft Green Educationa ...</span>
-										</p>
-									</td>
-									<td>Home Delivery</td>
-									<td>1</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					</main>
 				</div>
+			</div>
+
+			<!-- </div> -->
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- NAVBAR -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<script src="script.js"></script>
+
+	<script src="./js/script.js"></script>
 	<script>
 		const ctx = document.getElementById('myChart');
 

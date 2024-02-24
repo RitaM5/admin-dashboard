@@ -148,51 +148,34 @@ window.addEventListener('click', function (e) {
 	})
 })
 
+//main
+function showDashboards() {
+	document.getElementById('dashboards').style.display = 'block';
+	document.getElementById('pricePannel').style.display = 'none';
+}
 
+function showPricePannel() {
+	document.getElementById('dashboards').style.display = 'none';
+	document.getElementById('pricePannel').style.display = 'block';
+}
+//sub main data
+function showBillBoard() {
+	document.getElementById('billboard').style.display = 'block';
+	document.getElementById('ecommerce').style.display = 'none';
+}
 
+function showEcommerce() {
+	document.getElementById('billboard').style.display = 'none';
+	document.getElementById('ecommerce').style.display = 'block';
+}
+// sub sideber
 
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar-content');
 
-// PROGRESSBAR
-const allProgress = document.querySelectorAll('main .card .progress');
-
-allProgress.forEach(item=> {
-	item.style.setProperty('--value', item.dataset.value)
-})
-
-
-
-
-
-
-// APEXCHART
-var options = {
-  series: [{
-  name: 'series1',
-  data: [31, 40, 28, 51, 42, 109, 100]
-}, {
-  name: 'series2',
-  data: [11, 32, 45, 32, 34, 52, 41]
-}],
-  chart: {
-  height: 350,
-  type: 'area'
-},
-dataLabels: {
-  enabled: false
-},
-stroke: {
-  curve: 'smooth'
-},
-xaxis: {
-  type: 'datetime',
-  categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-},
-tooltip: {
-  x: {
-    format: 'dd/MM/yy HH:mm'
-  },
-},
-};
-
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
+    sidebarToggle.addEventListener('click', function () {
+      sidebar.classList.toggle('hide');
+	  sidebar.classList.toggle('show')
+    });
+  });
