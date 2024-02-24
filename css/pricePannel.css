@@ -100,11 +100,11 @@ li {
     padding: 10px;
 }
 
-.icon {
+.pannel-icon {
     font-size: 18px;
 }
 
-.icon-right {
+.pannel-icon-right {
     font-size: 18px;
     position: absolute;
     right: 0;
@@ -286,7 +286,6 @@ li {
     border-color: 1ps solid #1775F1;
     border: 2px solid #1775F1;
     padding: 10px;
-    /* display: inline-block; */
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s;
