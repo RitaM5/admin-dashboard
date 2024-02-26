@@ -159,15 +159,17 @@ function showPricePannel() {
 	document.getElementById('pricePannel').style.display = 'block';
 }
 //sub main data
-function showBillBoard() {
-	document.getElementById('billboard').style.display = 'block';
-	document.getElementById('ecommerce').style.display = 'none';
-}
+// function showBillBoard() {
+// 	document.getElementById('billboard').style.display = 'block';
+// 	document.getElementById('ecommerce').style.display = 'none';
+// }
 
 function showEcommerce() {
 	document.getElementById('billboard').style.display = 'none';
 	document.getElementById('ecommerce').style.display = 'block';
 }
+
+
 // sub sideber
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -179,3 +181,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	  sidebar.classList.toggle('show')
     });
   });
+

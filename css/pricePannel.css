@@ -87,7 +87,6 @@ li {
 
 .sidebar-list {
     margin: 20px 0;
-
     font-weight: 600;
     transition: all .3s ease;
     color: #fff;
@@ -338,6 +337,7 @@ li {
         bottom: 0;
         min-height: 100%;
     }
+    
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -373,7 +373,6 @@ li {
         bottom: 0;
         min-height: 100%;
     }
-
 
 }
 
