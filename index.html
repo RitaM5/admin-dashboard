@@ -9,6 +9,7 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="./css/pricePannel.css">
+	<link rel="stylesheet" href="./css/products.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Active eCommerce</title>
 </head>
@@ -272,11 +273,13 @@
 					<span class="aiz-side-nav-text">Price Pannel</span>
 				</a>
 			</li>
-
+			<li onclick="showProducts()"><a href="#" class="active"> <i
+						class="material-icons-outlined icon">extension</i>
+					Dropshipping Products <i id="iconPlaceholder" class="material-icons-outlined icon-right"></i>
+				</a></li>
 	</section>
 	<!-- SIDEBAR -->
 
-	<!-- NAVBAR -->
 	<section id="content">
 		<!-- NAVBAR -->
 		<nav>
@@ -1012,7 +1015,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- for price pannel -->
 			<div id="pricePannel" style="display: none;">
 				<div class="menu-icon" id="sidebarToggle">
 					<span class="material-icons-outlined">menu</span>
@@ -1096,13 +1099,523 @@
 									</p>
 								</div>
 							</div>
+							<!-- end card data -->
 						</div>
-					
+
 					</main>
 				</div>
 			</div>
+			<!-- end price pannel -->
+			<!-- for dropshipping products -->
+			<div id="products-details" style="display: none;">
+				<div class="content-data">
+					<div class="container-data">
+						<div class="select-menu">
+							<div class="select-btn">
+								<span class="sBtn-text">All Categories</span>
+								<i class="bx bx-chevron-down"></i>
+							</div>
+							<ul class="options">
+								<li class="option">
+									<span class="option-text">Github</span>
+								</li>
+								<li class="option">
+									<span class="option-text">Instagram</span>
+								</li>
+							</ul>
+						</div>
+						<div class="divider"></div>
+						<div class="search-bar"
+							style="display: flex; align-items: center; justify-content: flex-start;">
+							<i class='bx bx-search search-icon'></i>
+							<input type="text" class="search-input" placeholder="Search by Product Name">
+						</div>
+					</div>
+					<div class="filters-data">
+						<p class="filters" style="display: flex; align-items: center; gap: 6px;"><i
+								class="fas fa-filter"></i><span>Filters</span></p>
+						<p class="saved" style="display: flex; align-items: center; gap: 6px;"><i
+								class="fas fa-heart"></i><span>Saved</span></p>
+					</div>
+				</div>
+				<!-- products card -->
+				<div class="products-card">
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center;">
+							<img src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center;">
+							<img src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+					<div class="single-card">
+						<div class="topper-icon">
+							<div class="crown-icon">
+								<p style="display: flex; align-items: center; gap: 6px;"><i
+										class="fas fa-crown"></i><span class="divide"></span><span>Winner</span></p>
+							</div>
+							<img src="./img/favicon (1).png" alt="" srcset="">
+						</div>
+						<div style="display: flex; justify-content: center; align-items: center;">
+							<img src="./img/image.png" alt="" srcset="">
+						</div>
+						<h2>Apple</h2>
+						<p style="margin-top: 8px;">
+							2020 Apple MacBook Air Laptop: Apple M1 Chip, 13”
+						</p>
+						<div class="price">
+							<h4>৳1024000</h4>
+							<button style="padding: 3px 7px; border-radius: 4px; font-weight: 500;">35%
+								Off</button>
+						</div>
+						<hr style="margin-top: 12px;">
+						</hr>
+						<div class="varified">
+							<p style="display: flex; align-items: center; gap: 5px;">
+								<i id="" class="material-icons-outlined "
+									style="color: #18A661; border: none; outline: none; border-radius: 100%; ">check_circle</i>
+								<span>Varified</span>
+							</p>
+							<div>
+								<span style="color: rgb(80, 77, 77); font-size: 15px;">16 views</span>
+								<div style="display: flex; align-items: center;">
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+									<i class="material-icons-outlined star-icon" style="color: #FFAB0A;">star</i>
+								</div>
+							</div>
+						</div>
+						<div class="import-btn">
+							<p onclick="showProductsPopup()"
+								style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+								<span>Import</span><span class="up-right-arrow-icon"> <i
+										class="fas fa-arrow-up"></i></span>
+							</p>
+							<img src="./img/Secondary green.png" alt="" srcset="">
+						</div>
+					</div>
+				</div>
+				<!-- end products card -->
+				<!-- for popup -->
+				<div class="product-wrapper">
+					<div class="project_wrap">
+						<div class="shadow close_btn"></div>
+						<div class="project">
+							<div class="headers">
+								<div class="title">Listing</div>
+								<div class="icons">
+									<span class=" close_btn">
+										<ion-icon name="close-outline" class="i"></ion-icon>
+									</span>
+								</div>
+							</div>
+							<div class="container">
+								<div>
+									<div class="list-content">
+										<p style="font-weight: 500;"><span style="color: #FFAB0A; ">*</span> Store:</p>
+										<div class="single-list">
+											<div class="select-link">
+												<div class="select-data">
+													<img width="30" height="30"
+														src="https://media.istockphoto.com/id/1458215547/photo/brown-bear.webp?b=1&s=612x612&w=0&k=20&c=iYDAbb3cqlONzwOkwDfGKrJFNrDT3GtHenKwvNyaXoQ="
+														alt="" srcset="">
+													<div class="select-btn">
+														<span class="sBtn-text">https:www.linkdin.com</span>
+														<i class="bx bx-chevron-down"></i>
+													</div>
+												</div>
+												<ul class="link-options">
+													<li class="option">
+														<span class="option-text">https:www.facebook.com</span>
+													</li>
+													<li class="option">
+														<span class="option-text">https:www.linkdin.com</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="mid-shipping-content" style="margin-top: 20px;">
+										<h4>Shipping Information</h4>
+										<div>
+											<div class="shipping-content">
+												<div class="shipping-data" style="margin-top: 10px;">
+													<div class="single-shipping">
+														<p style="font-weight: 500;"><span
+																style="color: #FFAB0A;">*</span>
+															Ship Form:</p>
+														<div class="select-ship" style="margin-top: 8px;">
+															<div class="select-btn">
+																<span class="sBtn-text">China Warehouse</span>
+																<i class="bx bx-chevron-down"></i>
+															</div>
+															<ul class="ship-options">
+																<li class="option">
+																	<span class="option-text">USA Warehouse</span>
+																</li>
+																<li class="option">
+																	<span class="option-text">Korea Warehouse</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="shipping-data" style="margin-top: 10px;">
+													<div class="single-shipping">
+														<p style="font-weight: 500;"><span
+																style="color: #FFAB0A;">*</span>
+															Ship My Order(s) Most to:</p>
+														<div class="select-order" style="margin-top: 8px;">
+															<div class="select-btn">
+																<span class="sBtn-text">United States of America</span>
+																<i class="bx bx-chevron-down"></i>
+															</div>
+															<ul class="order-options">
+																<li class="option">
+																	<span class="option-text">United States of
+																		America</span>
+																</li>
+																<li class="option">
+																	<span class="option-text">United States of
+																		America</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="shipping-data" style="margin-top: 10px;">
+													<div class="single-shipping">
+														<p style="font-weight: 500;"><span
+																style="color: #FFAB0A;">*</span>
+															Shipping Method:</p>
+														<div class="select-method" style="margin-top: 8px;">
+															<div class="select-btn">
+																<span class="sBtn-text">Jewel Shipping</span>
+																<i class="bx bx-chevron-down"></i>
+															</div>
+															<ul class="method-options">
+																<li class="option">
+																	<span class="option-text">Jewel Shipping</span>
+																</li>
+																<li class="option">
+																	<span class="option-text">Jewel Shipping</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="end-shipping-content" style="font-size: 14px;">
+												<div>Estimated Delivery Time: 15-25days</div>
+												<div>Shipping Cost $2.06</div>
+												<div>Traxking Information: Available</div>
+											</div>
+										</div>
+									</div>
+									<div class="category-content" style="margin-top: 20px;">
+										<p style="font-weight: 500;"><span style="color: #FFAB0A;">*</span> Select
+											Category:</p>
+										<div class="category-select">
+											<div class="selects-category">
+												<div class="select-btn">
+													<span class="sBtn-text">Please select</span>
+													<i class="bx bx-chevron-down"></i>
+												</div>
+												<ul class="category-options">
+													<li class="option">
+														<span class="option-text">Github</span>
+													</li>
+													<li class="option">
+														<span class="option-text">Instagram</span>
+													</li>
+												</ul>
+											</div>
+											<button>Sync All</button>
+										</div>
 
-			<!-- </div> -->
+									</div>
+									<!-- products import popup tab content -->
+									<div class="">
+										<div class="tabContent">
+											<div class="buttonContent">
+												<button onclick="showTab(0,'#eee')">
+													<p style="font-weight: 500;"><span style="color: #FFAB0A;">*</span>
+														Variants</p>
+												</button>
+												<button onclick="showTab(1,'#eee')">
+													<p style="font-weight: 500;"><span style="color: #FFAB0A;">*</span>
+														Reviews</p>
+												</button>
+											</div>
+											<div class="tabPanels">
+												<div class="tabPannel-title">
+													<p style="font-weight: 500;">Buk Revise</p>
+													<div class="select-price">
+														<div class="select-btn">
+															<span class="sBtn-text">Price Change</span>
+															<i class="bx bx-chevron-down"></i>
+														</div>
+														<ul class="price-options">
+															<li class="option">
+																<span class="option-text">12000</span>
+															</li>
+															<li class="option">
+																<span class="option-text">20000</span>
+															</li>
+														</ul>
+													</div>
+													<input type="text" name="" id="">
+													<button class="ok">Ok</button>
+													<button class="recommend">Recommend Listing Price</button>
+												</div>
+												<div class="tabPannel-table">
+													<table>
+														<thead>
+															<tr>
+																<th>Image</th>
+																<th>SKU</th>
+																<th>CJ Color</th>
+																<th>RRP</th>
+																<th>CJ Price</th>
+																<th>Shipping Fee</th>
+																<th>Service Fee</th>
+																<th>Total Dropshipping Cost</th>
+																<th><sup style="color: #FFAB0A;">*</sup> Price (BDT)
+																</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>
+																	<img width="40" height="40"
+																		src="https://media.istockphoto.com/id/1458215547/photo/brown-bear.webp?b=1&s=612x612&w=0&k=20&c=iYDAbb3cqlONzwOkwDfGKrJFNrDT3GtHenKwvNyaXoQ="
+																		alt="" srcset="">
+																</td>
+																<td>CJLX91933701AZ</td>
+																<td>8018 Smart Love</td>
+																<td>$10.36</br><span style="color: gray;">Estimated
+																		Profit 1051%</span></td>
+																<td>$0.90</td>
+																<td>$1.81</td>
+																<td>$0.25</td>
+																<td>$2.96</td>
+																<td><input type="text" name="" id=""></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="tabPanels">
+												<h4>Select Reviews to import</h4>
+												<div class="reviews-title">
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="myCheckbox">
+															<label for="myCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">All</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="fiveStarsCheckbox">
+															<label for="fiveStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">5 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="fourStarsCheckbox">
+															<label for="fourStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">4 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="threeStarsCheckbox">
+															<label for="threeStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">3 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="twoStarsCheckbox">
+															<label for="twoStarsCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">2 Stars</span>
+													</div>
+													<div style="display: flex; align-items: center; gap: 20px;">
+														<div class="checkbox-container">
+															<input type="checkbox" id="oneStarCheckbox">
+															<label for="oneStarCheckbox"></label>
+														</div>
+														<span style="margin-top: 12px">1 Star</span>
+													</div>
+												</div>
+												<div style="display: flex;  gap: 7px; margin-top: 18px;">
+													<i style="color: #FFAB0A; margin-top: 5px;"
+														class="fas fa-exclamation-circle"></i>
+													<p>
+														Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+														Debitis, accusamus? Magni corporis enim, hic necessitatibus,
+														sint neque iure delectus, sed illum voluptatibus repellat ipsa
+														deserunt iusto ex? Magnam, fugiat alias.
+													</p>
+												</div>
+												<div class="reviews-container" style="margin-top: 25px;">
+													<div class="review-card">
+														<p>G****d</p>
+														<div>
+															<div style="display: flex; align-items: center;">
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+															</div>
+															<p style="margin-top: 5px;">
+																Lorem ipsum dolor, sit amet consectetur adipisicing
+																elit. Debitis, accusamus.
+															</p>
+														</div>
+													</div>
+													<div class="review-card">
+														<p>M****d</p>
+														<div>
+															<div style="display: flex; align-items: center;">
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+																<i class="material-icons-outlined star-icon"
+																	style="color: #FFAB0A;">star</i>
+															</div>
+															<p style="margin-top: 5px;">
+																Lorem ipsum dolor, sit amet consectetur adipisicing
+																elit. Debitis, accusamus.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="footer-btn" style="margin-top: 16px; margin-bottom: 16px;">
+												<button class="cancel_btn close_btn">
+													Cancel
+												</button>
+												<button class="list-btn">
+													List It Now
+												</button>
+												<button class="edit-btn">
+													Edit Before Listing
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end popup -->
+			</div>
 		</main>
 		<!-- MAIN -->
 	</section>
