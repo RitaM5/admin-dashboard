@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active-Ecommerce | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-GLhlTQ8iM01Nl+L9tRZ5wEjUn5QI6Az9R/DT8UMWO9Qq4sJ6p1tWSYd2+lOC+q6Z" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <!-- login container _by rita and css file is (login.css_ 37-327) amd js file (signin.js)-->
+    <div class="container">
+        <!-- image in left part, css lines(45-60) -->
+        <div class="left-sign ">
+            <div class="left-img gradient-overlay">
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- signup form, css lines(64-325) -->
+        <div class="right-sign">
+            <div class="right-content">
+                <div class="header-title">
+                    <img height="48px" width="48px"
+                        src="https://demo.activeitzone.com/ecommerce/public/uploads/all/pOcEwsWKlrd8jMih6o68tn4YAjWbQEAwvZfeZVxJ.svg"
+                        alt="" srcset="">
+                    <p>WELCOME TO ACTIVE ECOMMERCE CMS</p>
+                    <p style="font-size: 16px; color: rgb(62, 61, 61);">Login to your account.</p>
+                </div>
+                <!-- email and phone container css lines(112-172) js lines(14-27)-->
+                <div class="email-container">
+                    <div id="emailContent">
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                </div>
+                <!-- end  email and phone container -->
+
+                <!--password container css lines(175-205)  js lines(2-6)-->
+                <div class="password-container">
+                    <div>
+                        <label>Password</label>
+                        <input type="password" placeholder="Your Password" id="passwordInput" />
+                        <i class="fas fa-eye" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                </div>
+                <!-- end password container -->
+                <!-- checkbox css lines(245-282) -->
+                <div class="checkbox-container">
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="checkbox">
+                            <input type="checkbox" />
+                        </div>
+                        <p style="font-weight: 500; color: rgb(62, 61, 61); font-size: 14px;">Remember Me</p>
+                    </div>
+                    <p style="text-decoration: underline; font-size: 14px; color: pointer; color: rgb(62, 61, 61);">Forgot Password ?</p>
+                </div>
+                <!-- end checkbox -->
+
+                <!-- submit button css lines(283-293) -->
+                <div class="" style="padding-top: 2rem;">
+                    <a href="#" rel="noopener noreferrer">
+                        <input type="button" value="Create Account" class="submit-button" />
+                    </a>
+                </div>
+                <!-- end -->
+
+            </div>
+        </div>
+        <!-- end -->
+    </div>
+    <!-- end login -->
+
+    <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+    <script src="./js/signin.js"></script>
+</body>
+
+</html>

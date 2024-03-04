@@ -145,7 +145,7 @@ window.addEventListener('click', function (e) {
 	})
 })
 
-//main
+//main sidebar
 function showDashboards() {
 	document.getElementById('dashboards').style.display = 'block';
 	document.getElementById('pricePannel').style.display = 'none';
@@ -167,7 +167,7 @@ function showEcommerce() {
 }
 
 
-// sub sideber
+// sub sideber for pricepannel
 
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarToggle = document.getElementById('sidebarToggle');
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //for dropshipping-products
 
-//for category select
+//for all category select
 let optionMenu = document.querySelector('.select-menu');
 let selectBtn = optionMenu.querySelector('.select-btn');
 let options = optionMenu.querySelectorAll('.option');
@@ -197,7 +197,7 @@ options.forEach(option => {
     });
 });
 
-//products popup
+//products import popup
 var wrappers = document.querySelector(".product-wrapper");
 var close_btns = document.querySelectorAll(".close_btn");
 
@@ -210,17 +210,17 @@ close_btns.forEach(function (btn) {
 	});
 });
 
-//for popup link select
+//for popup store link select
 document.addEventListener('DOMContentLoaded', function () {
-	let optionMenus = document.querySelector('.select-link', '.select-ship');
-	let selectedBtn = optionMenus.querySelector('.select-link .select-btn', '.select-ship .select-btn');
-	let optionsData = optionMenus.querySelectorAll('.select-link .option', '.select-ship .option');
-	let Btn_text = optionMenus.querySelector('.select-link .sBtn-text', '.select-ship .sBtn-text');
+	let optionMenus = document.querySelector('.select-link');
+	let selectedBtn = optionMenus.querySelector('.select-link .select-btn');
+	let optionsData = optionMenus.querySelectorAll('.select-link .option');
+	let Btn_text = optionMenus.querySelector('.select-link .sBtn-text');
 	
 	selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active') );
 	optionsData.forEach(options => {
 		options.addEventListener('click', () => {
-			let selectedOption = options.querySelector('.select-link .option-text','.select-ship .option-text').innerText;
+			let selectedOption = options.querySelector('.select-link .option-text').innerText;
 			Btn_text.innerText = selectedOption;
 			optionMenus.classList.remove('active')
 		})
@@ -276,6 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 });
+
 // for category select
 document.addEventListener('DOMContentLoaded', function () {
 	let optionMenus = document.querySelector('.selects-category');
@@ -308,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 });
+
 // for popup tab
 
 var tabButtons=document.querySelectorAll(".tabContent .buttonContent button");

@@ -48,7 +48,9 @@ li {
     list-style: none;
 }
 
-
+#products-details{
+    padding: 4px 10px;
+}
 .content-data {
     display: flex;
     align-items: center;
@@ -65,6 +67,7 @@ li {
     border-radius: 10px;
 }
 
+/* all category select */
 .select-menu {
     background-color: #D9D9D9;
     border-radius: 6px;
@@ -75,7 +78,7 @@ li {
     display: flex;
     height: 50px;
     font-weight: 400;
-    border-radius: 8px;
+    border-radius: 10px;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
@@ -88,9 +91,9 @@ li {
 .select-menu .options {
     position: absolute;
     padding: 10px 20px;
-    top: 23%;
+    top: 20%;
     border-radius: 8px;
-    background-color: #D9D9D9;
+    background-color: rgba(27, 67, 77, 1);
     transition: all 0.6s;
     z-index: 40;
     display: none;
@@ -107,14 +110,15 @@ li {
     padding: 0 16px;
     border-radius: 8px;
     align-items: center;
-    background-color: #D9D9D9;
+    background-color: #fff;
+    margin-top: 6px;
 }
 
 .options .option:hover {
     background-color: lightblue;
 }
 
-/* end category select */
+/*all end category select */
 
 .divider {
     width: 1px;
@@ -169,7 +173,7 @@ li {
 /* products card */
 .products-card {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
     margin-top: 30px;
     border-radius: 10px;
@@ -185,7 +189,12 @@ li {
     overflow: hidden;
     border-radius: 10px;
 }
-
+.single-card h2{
+    font-size: 1.2rem;
+}
+.single-card p{
+    font-size: .90rem;
+}
 .divide {
     width: 1px;
     height: 18px;
@@ -198,13 +207,12 @@ li {
     justify-content: space-between;
     align-items: center;
     position: relative;
-
 }
 
 .crown-icon {
     background-color: #FFAB0A;
     color: white;
-    width: 35%;
+    width: 50%;
     display: flex;
     justify-content: center;
     padding: 15px 10px;
@@ -220,8 +228,11 @@ li {
     justify-content: space-between;
     gap: 6px;
     margin-top: 15px;
+   
 }
-
+.price h4{
+    font-size: .95rem;
+}
 .varified {
     display: flex;
     align-items: center;
@@ -238,10 +249,11 @@ li {
     align-items: center;
     margin-top: 12px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .import-btn p {
-    background-color: #18A661;
+    background-color:#18A661;
     width: 50%;
     padding: 8px 12px;
     text-align: center;
@@ -249,7 +261,32 @@ li {
     font-weight: 500;
     border-radius: 4px;
 }
-
+/* pagination */
+.pagination{
+    text-align: center;
+    margin-top: 40px;
+}
+.pagination a{
+    color: black;
+    padding: 4px 12px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: rgba(27, 67, 77, 1);;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+}
+.pagination a:hover:not(.active){
+    background-color: hsl(0, 0%, 77%);
+    border-radius: 5px;
+}
+.pagination .next{
+    background-color: rgba(27, 67, 77, 1);;
+    border-radius: 4px;
+    color: white;
+}
+/* end pagination */
 /* products popup */
 .product-wrapper {
     width: 100%;
@@ -317,7 +354,7 @@ li {
 
 
 .product-wrapper .project_wrap .project {
-    max-width: 980px;
+    max-width: 1020px;
     width: 100%;
     max-height: 100%;
     margin: 0 auto;
@@ -341,7 +378,8 @@ li {
 
 
 .product-wrapper .project_wrap .project .headers .title {
-    color: #FFAB0A;
+    /* color: #FFAB0A; */
+    color: rgba(27, 67, 77, 1);
     font-size: 16px;
     font-weight: 700;
     padding: 6px 10px;
@@ -406,14 +444,19 @@ li {
     width: 100%;
 }
 
+.select-data {
+    width: 100%;
+}
+
 .select-link .select-btn {
     display: flex;
-    height: 50px;
+    height: 52px;
     font-weight: 400;
     border-radius: 8px;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    width: 100%;
 }
 
 .select-link .select-btn i {
@@ -426,7 +469,7 @@ li {
     top: 105%;
     left: 2%;
     border-radius: 8px;
-    background-color: #ddcbcb;
+    background-color: rgba(27, 67, 77, 1);
     transition: all 0.6s;
     z-index: 48;
     display: none;
@@ -438,7 +481,7 @@ li {
 
 .link-options .option {
     display: flex;
-    height: 55px;
+    height: 52px;
     margin-top: 8px;
     cursor: pointer;
     padding: 0 16px;
@@ -620,23 +663,49 @@ li {
 
 /* end shipping method */
 /* select category */
+.category-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-content p {
+    width: 20%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.category-select {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 .selects-category {
     background-color: #D9D9D9;
     border-radius: 6px;
     padding: 0px 10px;
     width: 100%;
     position: relative;
-    left: 16px;
+    left: 18px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .selects-category .select-btn {
     display: flex;
-    height: 50px;
+    /* height: 45px; */
     font-weight: 400;
     border-radius: 8px;
+    height: 52px;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
 }
 
 .selects-category .select-btn i {
@@ -647,8 +716,9 @@ li {
     position: absolute;
     padding: 10px 20px;
     left: 1%;
+    top: 100%;
     border-radius: 8px;
-    background-color: #ddcbcb;
+    background-color: rgba(27, 67, 77, 1);
     transition: all 0.6s;
     z-index: 48;
     display: none;
@@ -661,7 +731,7 @@ li {
 
 .category-options .option {
     display: flex;
-    height: 55px;
+    height: 52px;
     margin-top: 8px;
     cursor: pointer;
     padding: 0 16px;
@@ -674,63 +744,29 @@ li {
     background-color: lightblue;
 }
 
-/* end select category */
-/* selelct price chnage */
-.select-price {
-    background-color: #D9D9D9;
+.category-select p {
+    width: 18%;
+    background-color: rgba(27, 67, 77, 1);
+    padding: 6px 4px;
     border-radius: 6px;
-    padding: 0px 10px;
-    position: relative;
-    left: 16px;
-}
-
-.select-price .select-btn {
     display: flex;
-    height: 50px;
-    font-weight: 400;
-    border-radius: 8px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    margin-left: 2px;
 }
 
-.select-price .select-btn i {
-    font-size: 20px;
+.category-select button {
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 500;
 }
 
-.select-price .price-options {
-    position: absolute;
-    padding: 10px 20px;
-    left: 1%;
-    border-radius: 8px;
-    background-color: #ddcbcb;
-    transition: all 0.6s;
-    z-index: 48;
-    display: none;
-    margin-top: 5px;
-}
+/* end select category */
 
-.select-price.active .price-options {
-    display: block;
-}
-
-.price-options .option {
-    display: flex;
-    height: 55px;
-    margin-top: 8px;
-    cursor: pointer;
-    padding: 0 16px;
-    border-radius: 8px;
-    align-items: center;
-    background-color: #fff;
-}
-
-.price-options .option:hover {
-    background-color: lightblue;
-}
 
 /* end select price change */
-.shipping-content {
+/* .shipping-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -785,13 +821,13 @@ li {
     border-radius: 6px;
     color: white;
     font-weight: 500;
-}
+} */
 
 /* for popup tab */
 
 .tabContent {
     width: 100%;
-    margin-top: 52px;
+    margin-top: 30px;
 }
 
 .tabContent .buttonContent {
@@ -805,7 +841,7 @@ li {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px 10px;
     font-family: sans-serif;
     font-size: 18px;
     background-color: #D9D9D9;
@@ -828,103 +864,146 @@ li {
 
 .tabPannel-title {
     display: flex;
-    gap: 22px;
+    gap: 15px;
     align-items: center;
 
 }
 
-.tabPannel-title .select-link {
+/* selelct price chnage */
+.select-price {
+    background-color: #D9D9D9;
+    border-radius: 6px;
+    padding: 0px 10px;
+}
+
+.select-price .select-btn {
+    display: flex;
+    height: 45px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.select-price .select-btn i {
+    font-size: 20px;
+}
+
+.select-price .price-options {
+    position: absolute;
+    padding: 10px 20px;
+    left: 14%;
+    border-radius: 8px;
+    background-color: rgba(27, 67, 77, 1);
+    transition: all 0.6s;
+    z-index: 48;
+    display: none;
+    margin-top: 5px;
+}
+
+.select-price.active .price-options {
+    display: block;
+}
+
+.price-options .option {
+    display: flex;
+    height: 42px;
+    margin-top: 8px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background-color: #fff;
+}
+
+.price-options .option:hover {
+    background-color: lightblue;
+}
+
+/* select price end */
+
+/* .tabPannel-title .select-link {
     width: 160px;
     height: 55px;
     display: flex;
     align-items: center;
     padding: 5px 10px;
-}
+} */
 
 .tabPannel-title input {
-    width: 160px;
-    height: 55px;
+    width: 150px;
+    height: 45px;
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 0px 8px;
     border: none;
     border-radius: 6px;
 }
 
 .tabPannel-title .ok {
     width: 90px;
-    height: 55px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 10px;
-    background-color: #FFAB0A;
+    padding: 0px 8px;
+    background-color: rgba(27, 67, 77, 1);
     color: white;
     font-size: 16px;
     border-radius: 6px;
 }
 
 .tabPannel-title .recommend {
-    height: 55px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px 10px;
-    background-color: #FFAB0A;
+    padding: 0px 10px;
+    background-color: rgba(27, 67, 77, 1);
     color: white;
     font-size: 16px;
     border-radius: 6px;
 }
 
+/* table */
 .tabPannel-table {
-    margin-top: 20px;
-    overflow-x: scroll;
+    margin-top: 30px;
 }
 
-table {
+.table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-thead {
-    background-color: #d6dae1;
+.table th {
+    background-color: #D9D9D9;
+    color: #000;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+
 }
 
-th {
+.table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.table td input {
     padding: 6px;
-    text-align: center;
-    font-size: 10px;
-
-}
-
-td {
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-}
-
-td input {
+    border-radius: 4px;
     border: none;
-    width: 80px;
-    height: 40px;
-}
-/* footer btn */
-.footer-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
 }
 
-.footer-btn .list-btn {
-    background-color: #FFAB0A;
-    color: white;
+.table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
 }
 
-.footer-btn .edit-btn {
-    background-color: #FFAB0A;
-    color: white;
-}
+/* table end */
 
 /* for reviews tab pannel */
 
@@ -980,6 +1059,44 @@ td input {
     justify-content: space-between;
 }
 
+/* footer btn */
+.footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.footer-btn .cancel_btn {
+    width: 10%;
+    border: 1px solid rgba(27, 67, 77, 1);
+    text-align: center;
+    border-radius: 6px;
+}
+
+.footer-btn .list-btn {
+    background-color: rgba(27, 67, 77, 1);
+    color: white;
+    font-weight: 500;
+    width: 15%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-btn .edit-btn {
+    background-color: rgba(27, 67, 77, 1);
+    color: white;
+    font-weight: 500;
+    width: 25%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 576px) {
     .content-data {
         display: grid;
@@ -1023,25 +1140,40 @@ td input {
         top: 8.5%;
     }
 
+    .category-content {
+        display: block;
+        width: 100%;
+    }
+
+    .category-content p {
+        width: 100%;
+    }
+
     .category-select {
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
     }
 
-    .selects-category {
+    .category-select .selects-category {
+        width: 100%;
         left: 0;
+    }
+
+    .category-select .selects-category .select-btn {
         width: 100%;
     }
 
-    .selects-category button {
-        width: 100%;
-    }
-
-    .select-btn {
+    .selects-category p {
         width: 100%;
     }
 
     .select-price {
         left: 0;
+    }
+
+    .select-price .price-options {
+        left: 9%;
     }
 
     .select-ship .ship-options {
@@ -1052,16 +1184,18 @@ td input {
         left: 0;
     }
 
-    .select-method .method-options {
-        left: 9%;
-    }
-
     .filters-data {
         justify-content: center;
     }
 
     .products-card {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .crown-icon {
+        bottom: 0;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 
     .list-content {
@@ -1142,10 +1276,43 @@ td input {
         width: 100%;
     }
 
+    /* table */
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
     /* footer btn */
     .footer-btn {
-        display: grid;
-        justify-content: center;
+        display: block;
     }
 
     .footer-btn .cancel_btn {
@@ -1154,10 +1321,12 @@ td input {
 
     .footer-btn .list-btn {
         width: 100%;
+        margin-top: 7px;
     }
 
     .footer-btn .edit-btn {
         width: 100%;
+        margin-top: 7px;
     }
 
     .reviews-title {
@@ -1203,11 +1372,6 @@ td input {
     .reviews-title {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-btn {
-        display: grid;
-        justify-content: left;
     }
 
     * {
@@ -1265,6 +1429,14 @@ td input {
     }
 
     .select-price {
+        left: 0;
+    }
+
+    .select-price .price-options {
+        left: 6%;
+    }
+
+    .select-method .method-options {
         left: 0;
     }
 
@@ -1392,6 +1564,41 @@ td input {
         width: 100%;
     }
 
+    /* table */
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
     .review-card {
         display: grid;
     }
@@ -1402,6 +1609,10 @@ td input {
 }
 
 @media screen and (min-width: 769px) and (max-width: 970px) {
+
+    .products-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .crown-icon {
         width: 100%;
@@ -1423,6 +1634,11 @@ td input {
 
     .category-content {
         display: grid;
+    }
+
+    .category-select .selects-category {
+
+        left: 0;
     }
 
     .category-content .select-link {

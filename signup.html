@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active-Ecommerce | SignUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-GLhlTQ8iM01Nl+L9tRZ5wEjUn5QI6Az9R/DT8UMWO9Qq4sJ6p1tWSYd2+lOC+q6Z" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <!-- signup container _by rita and css file is (signup.css_ 37-327) amd js file (signin.js)-->
+    <div class="container">
+        <!-- image in left part, css lines(45-60) -->
+        <div class="left-sign">
+            <div class="left-img">
+                <img class="img-fit"
+                    src="https://demo.activeitzone.com/ecommerce/public/uploads/all/tAABdnSatNvUHRjN0bqEayGGEY86RqwHPyAfJIPC.webp"
+                    alt="" srcset="">
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- signup form, css lines(64-325) -->
+        <div class="right-sign">
+            <div class="right-content">
+                <div class="header-title">
+                    <img height="48px" width="48px"
+                        src="https://demo.activeitzone.com/ecommerce/public/uploads/all/pOcEwsWKlrd8jMih6o68tn4YAjWbQEAwvZfeZVxJ.svg"
+                        alt="" srcset="">
+                    <p>CREATE AN ACCOUNT</p>
+                </div>
+                <!-- name container css lines(88-108) -->
+                <div class="name-container">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Full Name" />
+                </div>
+                <!-- email and phone container css lines(112-172) js lines(14-27)-->
+                <div class="email-container">
+                    <div id="emailContent">
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div id="phoneContent"  style="display: none;">
+                        <label>Phone</label>
+                        <div class="phone-container">
+                            <div class="select-box">
+                                <select>
+                                    <option value="1">+880</option>
+                                    <option value="2">+999</option>
+                                    <option value="3">+511</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <input type="phone" placeholder="00 00 00" />
+                            </div>
+                        </div>
+                    </div>
+                    <p id="email-text" onclick="convertPhone()">* <span>Use Phone Number instead</span></p>
+                    <p id="phone-text" onclick="convertEmail()" style="display: none;">* <span>Use Email Instead</span></p>
+                </div>
+                <!-- end  email and phone container -->
+
+                <!--password container css lines(175-205)  js lines(2-6)-->
+                <div class="password-container">
+                    <div>
+                        <label>Password</label>
+                        <input type="password" placeholder="Your Password" id="passwordInput" />
+                        <i class="fas fa-eye" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                    <span>Password must contain at least 6 digits</span>
+                </div>
+                <!-- end password container -->
+
+                <!-- confirm password container css lines(206-236) & js lines(8-12)-->
+                <div class="confirmPassword-container">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Your Password" id="confirmPasswordInput" />
+                    <i class="fas fa-eye" onclick="toggleConfirmPasswordVisibility()"></i>
+                </div>
+                <!-- end confirm password container -->
+
+                <!-- recaptcha css(238-242)-->
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6LczR4QpAAAAADSjPPknC66Opjcdj2O-c5mQF9OX">
+                        <div>
+                            <div><iframe title="reCAPTCHA" role="presentation" name="a-jl9cdft9ywrh" frameborder="0"
+                                    scrolling="no"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                    src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI&amp;co=aHR0cHM6Ly9kZW1vLmFjdGl2ZWl0em9uZS5jb206NDQz&amp;hl=en&amp;v=1kRDYC3bfA-o6-tsWzIBvp7k&amp;size=normal&amp;cb=jo5ntaxgf9du"></iframe>
+                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                class="g-recaptcha-response"
+                                style="border: 1px solid #d42d2a;  padding: 0px; resize: none;  display: none;"></textarea>
+                        </div><iframe style="display: none;"></iframe>
+                        <!-- width: 250px; height: 40px;  -->
+                    </div>
+                </div>
+                <!-- end recaptcha 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI -->
+
+                <!-- checkbox css lines(245-282) -->
+                <div class="checkbox-container">
+                    <div class="checkbox">
+                        <input type="checkbox" />
+                    </div>
+                    <p style="font-weight: 500;">By signing up you agree to our <span style="color: #d42d2a;">terms and
+                            conditions</span></p>
+                </div>
+                <!-- end checkbox -->
+
+                <!-- submit button css lines(283-293) -->
+                <div class="" style="padding-top: 2rem;">
+                    <a href="#" rel="noopener noreferrer">
+                        <input type="button" value="Create Account" class="submit-button" />
+                    </a>
+                </div>
+                <!-- end -->
+                <!-- socile login css lines(298-326)-->
+                <div class="socile-login" style="display: grid; justify-content: center; padding-top: 1.2rem;">
+                    <span style="text-align: center;  color: rgb(62, 61, 61);">Or Join With</span>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook facebook"></i>
+                        <i class="fab fa-google google"></i>
+                        <i class="fab fa-twitter twitter"></i>
+                        <i class="fab fa-apple apple"></i>
+                    </div>
+                </div>
+                <!-- end -->
+                <p class="" style="color: rgb(62, 61, 61); padding-top: 2rem;">Already have an account? <a href="/login.html"
+                        style="color: #d42d2a; font-weight: 600; font-size: 1.1rem; padding-left: .30rem;">Log in</a>
+                </p>
+                <a href="#"
+                    style="color: #d42d2a; font-weight: 600; font-size: 1rem; padding-top: .75rem; display: inline-block;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Previous Page
+                </a>
+                <!-- end -->
+            </div>
+        </div>
+        <!-- end -->
+    </div>
+    <!-- end signup -->
+    <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+    <script src="./js/signin.js"></script>
+</body>
+
+</html>
